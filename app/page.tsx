@@ -1,4 +1,4 @@
-import Home from "./home/page";
+import Home from "./component/home";
 
 const LandingPage = () => {
   return <Home />;
