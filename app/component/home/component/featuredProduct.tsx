@@ -1,5 +1,7 @@
 "use client";
 
+import IntroBadgeContainer from "./IntroBadgeComponent";
+import ProductSection from "./productCrousal";
 import ProductCrousal from "./productCrousal";
 
 const FeaturedProduct = () => {
@@ -25,10 +27,11 @@ const FeaturedProduct = () => {
       <div
         className="
         flex flex-row items-center xl:justify-center lg:justify-center justify-center
-        w-[80%] p-9 mx-auto
+        w-[100%] p-9 mx-auto
            "
       >
-        <ProductCrousal />
+        <ProductSection />
+        {/* <ProductCrousal /> */}
       </div>
     </div>
   );

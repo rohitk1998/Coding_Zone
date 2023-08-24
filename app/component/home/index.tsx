@@ -4,6 +4,7 @@ import Overview from "./component/overview";
 import IntroCoverImage from "./component/introCover";
 import IntroBadgeContainer from "./component/IntroBadgeComponent";
 import FeaturedProduct from "./component/featuredProduct";
+import MobileDev from "../../../public/images/mobiledev.jpg";
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
             xl:grid-cols-2
             2xl:grid-cols-2"
         >
-          <IntroCoverImage />
+          <IntroCoverImage image={MobileDev} />
           <IntroBadgeContainer />
         </div>
         {/* Intro Section End */}
@@ -33,7 +34,7 @@ export default function Home() {
       <Overview />
       {/* Company Overview Section End */}
       {/* Our Products Start */}
-      <div className="flex w-full h-[100vh] bg-white">
+      <div className="flex w-[100%] h-[100vh] bg-white">
         <FeaturedProduct/>
       </div>
       {/* Our Products End */}

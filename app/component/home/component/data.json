@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Ludo Star",
+        "image": "https://images.unsplash.com/photo-1642056448416-b7dd0ed968cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "price": 29.99
+    },
+    {
+        "name": "Counter Strike",
+        "image": "https://images.unsplash.com/photo-1630534658718-395efda906cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80",
+        "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+        "price": 39.99
+    },
+    {
+        "name": "Livif App",
+        "image": "https://images.unsplash.com/photo-1554260570-47e791ab2fc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
+        "description": "Vestibulum quis lobortis nunc. Quisque varius nunc in cursus fermentum.",
+        "price": 19.99
+    },
+    {
+        "name": "Trozon Zone",
+        "image": "https://images.unsplash.com/photo-1527334919515-b8dee906a34b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        "description": "Sed vestibulum purus nec massa luctus, a sodales tellus volutpat.",
+        "price": 49.99
+    },
+    {
+        "name": "Hppening",
+        "image": "https://images.unsplash.com/photo-1666010895758-bd5ed3bd7db9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fHNvZnR3YXJlJTIwYXBwfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+        "description": "Fusce ut nulla nec lectus facilisis hendrerit a ac urna.",
+        "price": 59.99
+    },
+    {
+        "name": "Perker",
+        "image": "https://images.unsplash.com/photo-1600087626014-e652e18bbff2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHNvZnR3YXJlJTIwYXBwfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+        "description": "Maecenas fermentum magna in cursus facilisis. Aliquam non aliquam nulla.",
+        "price": 24.99
+    },
+    {
+        "name": "Horizon",
+        "image": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fHNvZnR3YXJlJTIwYXBwfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+        "description": "Vivamus vitae ipsum vel mauris consectetur aliquet non at nisi.",
+        "price": 34.99
+    },
+    {
+        "name": "Lamp Stick",
+        "image": "https://images.unsplash.com/photo-1685163344406-c335e7712b8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fHNvZnR3YXJlJTIwYXBwfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+        "description": "Duis interdum mi et lectus pellentesque, et cursus augue dapibus.",
+        "price": 44.99
+    }
+]

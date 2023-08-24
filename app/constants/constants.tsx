@@ -35,12 +35,20 @@ const WORK_OVERVIEW = [
     description: "We have build sevral Apps, using Reactjs and Nextjs.",
   },
   {
+    mainHeading: "WEB App Development",
+    description: "We have build sevral Apps, using Reactjs and Nextjs.",
+  },
+  {
     mainHeading: "IOS App Development",
     description: "We create mobile applications using Native Stacks, Xcode.",
   },
   {
     mainHeading: "UI/UX",
     description: "We have provided best pixel prefect designs.",
+  },
+  {
+    mainHeading: "WEB App Development",
+    description: "We have build sevral Apps, using Reactjs and Nextjs.",
   },
 ];
 
