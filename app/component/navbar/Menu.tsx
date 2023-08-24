@@ -34,6 +34,7 @@ const Menu: React.FC<any> = ({ isOpen }) => {
         >
           {MENU_ITEMS.map((menu, index) => (
             <div
+             key={index}
               className="
         flex
         flex-row
@@ -71,6 +72,7 @@ const Menu: React.FC<any> = ({ isOpen }) => {
         >
           {MENU_ITEMS.map((menu, index) => (
             <div
+            key={index}
               className="
         flex
         flex-col
