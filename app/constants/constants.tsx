@@ -12,11 +12,11 @@ const COMPANY_INFORMATION = [
   },
   {
     totalYr: "20+",
-    description: "Product Delivered",
+    description: "Solutions Delivered",
   },
   {
-    totalYr: "20+",
-    description: "Satisfied Clients",
+    totalYr: "90%",
+    description: "Client Retention",
   },
   {
     totalYr: "10+",
