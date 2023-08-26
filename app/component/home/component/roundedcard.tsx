@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React from "react";
 
@@ -20,10 +20,10 @@ const RoundedCard: React.FC<RoundedCardProps> = ({
         px-3 py-3 mx-auto flex flex-col items-start
          justify-center border-[1px] rounded-[20px]
           shadow-lg hover:text-white transition
-           ease-in-out delay-150
+           ease-in-out delay-50
             ${
-        index == 1 || index == 2 ? "bg-gray-100" : "bg-white"
-      } hover:-translate-y-1 hover:scale-110 hover:bg-primaryColor duration-300`}
+              index == 1 || index == 2 ? "lg:bg-gray-100 md:bg-gray-100 bg-white" : "bg-white"
+            } hover:-translate-y-1 hover:scale-100 hover:bg-primaryColor duration-300`}
     >
       <h6 className="mb-1 text-lg font-extrabold dark:text-white hover:text-white md:text-md lg:text-lg ml-2">
         {mainHeading}

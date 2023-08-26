@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={font.className}>
         <Navbar />
         {children}
-        {/* <AppFooter/> */}
+        <AppFooter/>
       </body>
     </html>
   );

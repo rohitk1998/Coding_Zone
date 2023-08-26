@@ -12,8 +12,9 @@ const Overview = () => {
        sm:mt-[60px]
        mt-[30px]
        px-4
-       py-10
+       py-12
        bg-secondaryColor
+       rounded-3xl
       "
     >
       <OverviewHeading />
