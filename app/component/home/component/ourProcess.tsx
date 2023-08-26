@@ -10,7 +10,7 @@ const OurProcess = () => {
     <Container>
       <div className="w-[75%] mx-auto flex flex-col items-center xl:justify-center lg:justify-cetner justify-center rounded-[20px]">
         <h1 className="mb-4 text-4xl font-bold text-black md:text-4xl lg:text-6xl ml-2 text-center">
-        {"Lets talk about your project"}
+        Lets talk about your project
         </h1>
         <h1 className="mb-4 text-xl font-normal text-gray-500 md:text-2xl lg:text-2xl ml-2 text-center">
           Asking a query is the first step towards building your prototype.
