@@ -10,7 +10,7 @@ const OurProcess = () => {
     <Container>
       <div className="w-[75%] mx-auto flex flex-col items-center xl:justify-center lg:justify-cetner justify-center rounded-[20px]">
         <h1 className="mb-4 text-4xl font-bold text-black md:text-4xl lg:text-6xl ml-2 text-center">
-        Let’s talk about your project
+        {`Let’s talk about your project`}
         </h1>
         <h1 className="mb-4 text-xl font-normal text-gray-500 md:text-2xl lg:text-2xl ml-2 text-center">
           Asking a query is the first step towards building your prototype.
@@ -20,9 +20,6 @@ const OurProcess = () => {
       <div className="grid lg:grid-cols-2 grid-cols-1 xl:grid-cols-2 p-4 bg-white md:grid-cols-2">
        <IntroCoverImage image={ContactImage}/>
 <div className="isolate bg-transparent mt-[30px]">
-{/* <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]" aria-hidden="true">
-    <div className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#00ff99] to-[#fb9f42] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]" ></div>
-  </div> */}
   <form action="#" method="POST" className="xl:mx-[0px] lg:mx-[0px] md:mx-[0px] mx-auto max-w-xl sm:mt-20">
     <div className="grid grid-cols-1 gap-y-6 sm:grid-cols-2">
       <div className="sm:col-span-2">
