@@ -51,7 +51,7 @@ const WORK_OVERVIEW = [
     icon : WebIcon
   },
   {
-    mainHeading: "IOS Development",
+    mainHeading: "iOS Development",
     description: "We create mobile applications using Native Stacks, Xcode.",
     icon : IphoneIcon
   },
@@ -87,7 +87,7 @@ const   FOOTER_LINKS  = [
         name : "Android Development" 
       },
       {
-        name : "Ios Development" 
+        name : "iOS Development" 
       },
       {
         name : "Web Development" 

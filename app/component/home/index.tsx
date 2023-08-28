@@ -15,7 +15,7 @@ export default function Home() {
       <Container>
         <div
           className="
-            lg:pt-[200px]
+            lg:pt-[250px]
             md:pt-[40px]
             sm:pt-[60px]
             pt-[80px]
@@ -39,9 +39,7 @@ export default function Home() {
       </Container>
       {/* Company Overview Section End */}
       {/* Our Products Start */}
-      <div className="flex w-[100%] bg-white">
         <FeaturedProduct />
-      </div>
       {/* Our Products End */}
       {/* Our Process Start */}
       <OurProcess />

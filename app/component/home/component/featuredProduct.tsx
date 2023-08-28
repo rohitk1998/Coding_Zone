@@ -24,7 +24,7 @@ const FeaturedProduct = () => {
       <div
         className="
         flex flex-row items-center xl:justify-center lg:justify-center justify-center
-        w-[100%] p-9 mx-auto
+        w-[100%] mx-auto
            "
       >
         <ProductSection />
