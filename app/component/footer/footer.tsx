@@ -20,7 +20,7 @@ const AppFooter = () => {
             <div className="flex-1 flex flex-col justify-start mr-10">
               <Logo />
               <p
-                className={`${styles.paragraph} mt-4 max-w-[100%] text-xl text-secondaryColor`}
+                className={`mt-4 max-w-[100%] text-xl text-secondaryColor`}
               >
                 Making the world a better place through constructing <br />
                 elegant hierarchies.
@@ -52,7 +52,7 @@ const AppFooter = () => {
               `}
                   />
                   <p
-                    className={`max-w-[100%] text-lg font-normal text-gray-400 ml-2`}
+                    className={`max-w-[100%] text-md font-normal text-gray-400 ml-2`}
                   >
                     Phase-8B Ind. Area. Mohali, Punjab, India. Pin- 160055
                   </p>
@@ -71,7 +71,7 @@ const AppFooter = () => {
               `}
                   />
                   <p
-                    className={`max-w-[100%] text-lg font-normal text-gray-400 ml-2`}
+                    className={`max-w-[100%] text-md font-normal text-gray-400 ml-2`}
                   >
                     contact@codingzonesoutions.in
                   </p>
@@ -83,14 +83,13 @@ const AppFooter = () => {
                       color: "gray",
                       width: "25px",
                       height: "25px",
-                      marginTop:5
                     }}
                     className={`
               cursor-pointer
               `}
                   />
                   <p
-                    className={`max-w-[100%] text-lg font-normal text-gray-400 ml-2`}
+                    className={`max-w-[100%] text-md font-normal text-gray-400 ml-2`}
                   >
                     8360308065
                   </p>
