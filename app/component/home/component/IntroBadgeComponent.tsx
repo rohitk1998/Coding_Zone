@@ -30,7 +30,7 @@ const IntroBadgeContainer = () => {
         2xl:grid-row-2
         "
           >
-            <div className="flex flex-row items-center justify-center w-[100%]">
+            <div className="flex flex-row items-center justify-between w-[100%]">
               <div
                 className="
         grid 
@@ -42,7 +42,9 @@ const IntroBadgeContainer = () => {
         2xl:grid-cols-2
         p-3
         w-full  
-        gap-6 
+        gap-3
+        xl:gap-6
+        lg:gap-6 
         "
               >
                 {WORK_OVERVIEW.map((item, idx) => {
@@ -50,6 +52,7 @@ const IntroBadgeContainer = () => {
                     <RoundedCard
                       key={idx}
                       index={idx}
+                      icon={item.icon}
                       mainHeading={item.mainHeading}
                       paragraph={item.description}
                     />
@@ -69,7 +72,10 @@ const IntroBadgeContainer = () => {
                 2xl:grid-cols-2
                 p-3
                 w-full  
-                gap-6
+                gap-3 
+                xl:gap-6
+                lg:gap-6
+
         "
               >
                 {WORK_OVERVIEW.map((item, idx) => {
@@ -77,6 +83,7 @@ const IntroBadgeContainer = () => {
                     <RoundedCard
                       key={idx}
                       index={idx}
+                      icon={item.icon}
                       mainHeading={item.mainHeading}
                       paragraph={item.description}
                     />
