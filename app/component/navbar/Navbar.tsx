@@ -18,7 +18,7 @@ const Navbar = () => {
     setOpenMenu(!openMenu);
   };
   return (
-    <div className="fixed w-full bg-transparent z-10 bg-white">
+    <div className="fixed w-full bg-transparent z-10 bg-white lg:border-none border-b-[1px] lg:shadow-sm shadow-sm">
       <div className="py-4">
         <Container>
           <div className="flex flex-row items-center justify-between ">

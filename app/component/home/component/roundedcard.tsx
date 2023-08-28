@@ -27,7 +27,6 @@ const RoundedCard: React.FC<RoundedCardProps> = ({
         border-[1px] 
         rounded-[20px]
         shadow-lg 
-        hover:text-white 
         transition
         ease-in-out 
         delay-50
@@ -36,8 +35,9 @@ const RoundedCard: React.FC<RoundedCardProps> = ({
         hover:bg-primaryColor 
         duration-200
         p-4
-        w-[90%] lg:w-[230px] xl:w-[280px]
+        w-[100%] lg:w-[230px] xl:w-[280px]
         xl:h-[200px] lg:h-[200px] md:h-[200px] sm:h-[200px] h-[200px] 
+        group
         "
     >
       <div
@@ -62,7 +62,7 @@ const RoundedCard: React.FC<RoundedCardProps> = ({
         </h6>
       </div>
       <div className="mt-3 w-full items-start justify-start flex flex-row">
-        <p className="mb-1 text-sm font-normal dark:text-white hover:text-white md:text-sm lg:text-sm ml-2">
+        <p className="mb-1 text-md font-semiBold text-gray-500 group-hover:text-white md:text-md lg:text-md ml-2">
           {paragraph}
         </p>
       </div>

@@ -6,25 +6,100 @@ import Logo from "../navbar/Logo";
 import { FOOTER_ICONS, FOOTER_LINKS } from "@/app/constants/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faLocationPin,faEnvelope,faPhone } from "@fortawesome/free-solid-svg-icons";
+import IndianFlag from "../../../public/images/india.png";
 
 const AppFooter = () => {
   return (
-    <Container>
-      <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
-        <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
-          <div className="flex-1 flex flex-col justify-start mr-10">
-            <Logo />
-            <p
-              className={`${styles.paragraph} mt-4 max-w-[310px] text-gray-500`}
-            >
-              Making the world a better place through constructing <br />
-              elegant hierarchies.
-            </p>
-          </div>
-
+    <div className="border-t-[1px]">
+      <Container>
+        <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
           <div
-            className="flex-[1.5]
+            className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}
+          >
+            <div className="flex-1 flex flex-col justify-start mr-10">
+              <Logo />
+              <p
+                className={`${styles.paragraph} mt-4 max-w-[100%] text-xl text-secondaryColor`}
+              >
+                Making the world a better place through constructing <br />
+                elegant hierarchies.
+              </p>
+              <div className="w-[50%] flex-col flex items-start justify-start mt-7">
+                <div className="w-full flex flex-row items-center justify-start py-3">
+                  <Image
+                    alt="sdasd"
+                    src={IndianFlag}
+                    className="w-[38px] h-[30px] shadow-lg"
+                  />
+                  <p
+                    className={`max-w-[100%] text-lg font-bold text-black ml-3`}
+                  >
+                    INDIA
+                  </p>
+                </div>
+                <div className="w-full flex flex-row items-start justify-start py-3">
+                  <FontAwesomeIcon
+                    icon={faLocationPin}
+                    style={{
+                      color: "gray",
+                      width: "25px",
+                      height: "25px",
+                      marginTop:5
+                    }}
+                    className={`
+              cursor-pointer
+              `}
+                  />
+                  <p
+                    className={`max-w-[100%] text-lg font-normal text-gray-400 ml-2`}
+                  >
+                    Phase-8B Ind. Area. Mohali, Punjab, India. Pin- 160055
+                  </p>
+                </div>
+                <div className="w-full flex flex-row items-start justify-start py-3">
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    style={{
+                      color: "gray",
+                      width: "25px",
+                      height: "25px",
+                      marginTop:5
+                    }}
+                    className={`
+              cursor-pointer
+              `}
+                  />
+                  <p
+                    className={`max-w-[100%] text-lg font-normal text-gray-400 ml-2`}
+                  >
+                    contact@codingzonesoutions.in
+                  </p>
+                </div>
+                <div className="w-full flex flex-row items-start justify-start py-3">
+                  <FontAwesomeIcon
+                    icon={faPhone}
+                    style={{
+                      color: "gray",
+                      width: "25px",
+                      height: "25px",
+                      marginTop:5
+                    }}
+                    className={`
+              cursor-pointer
+              `}
+                  />
+                  <p
+                    className={`max-w-[100%] text-lg font-normal text-gray-400 ml-2`}
+                  >
+                    8360308065
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="flex-[1.5]
        w-full 
        flex 
        flex-row
@@ -34,32 +109,32 @@ const AppFooter = () => {
        mt-10
 
        "
-          >
-            {FOOTER_LINKS.map((footerlink, idx) => (
-              <div
-                className="
+            >
+              {FOOTER_LINKS.map((footerlink, idx) => (
+                <div
+                  className="
             flex
             flex-col
             ss:my-0
             my-4
             min-w-[150px]
             "
-                key={idx}
-              >
-                <h4
-                  className="
+                  key={idx}
+                >
+                  <h4
+                    className="
                font-medium
                text-[18px]
                leading-[27px]
                text-black 
                "
-                >
-                  {footerlink.title}
-                </h4>
-                <ul className="list-none mt-4">
-                  {footerlink.links.map((link, idx) => (
-                    <li
-                      className={`
+                  >
+                    {footerlink.title}
+                  </h4>
+                  <ul className="list-none mt-4">
+                    {footerlink.links.map((link, idx) => (
+                      <li
+                        className={`
                        font-normal 
                        text-[16px] 
                        leading-[24px]
@@ -68,37 +143,37 @@ const AppFooter = () => {
                        cursor-pointer
                        ${idx !== footerlink.links.length - 1 ? "mb-4" : "mb-0"}
                         `}
-                      key={idx}
-                    >
-                      {link.name}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+                        key={idx}
+                      >
+                        {link.name}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div
-          className="flex w-full justify-between items-center
+          <div
+            className="flex w-full justify-between items-center
         
         md:flex-row flex-col pt-6 p-4 border-t-[1px]"
-        >
-          <p
-            className="
+          >
+            <p
+              className="
                font-normal
                text-[18px]
                leading-[27px]
                text-gray-300 
                text-center
                "
-          >
-            @2023 CodingZone Solutions. All Rights Reserved.
-          </p>
-          <div className="flex flex-row md:mt-0 mt-4">
-            {FOOTER_ICONS.map((icon, idx) => (
-              <div
-                className={`
+            >
+              @2023 CodingZone Solutions. All Rights Reserved.
+            </p>
+            <div className="flex flex-row md:mt-0 mt-4">
+              {FOOTER_ICONS.map((icon, idx) => (
+                <div
+                  className={`
              w-[50px] h-[50px]
              flex
              flex-row
@@ -118,20 +193,21 @@ const AppFooter = () => {
         duration-300
              ${idx !== FOOTER_ICONS.length - 1 ? "mr-6" : "mr-0"}
              `}
-              >
-                <FontAwesomeIcon
-                  icon={icon.icon}
-                  style={{ color: "white", width: "30px", height: "30px" }}
-                  className={`
+                >
+                  <FontAwesomeIcon
+                    icon={icon.icon}
+                    style={{ color: "white", width: "25px", height: "25px" }}
+                    className={`
               cursor-pointer
               `}
-                />
-              </div>
-            ))}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-    </Container>
+        </section>
+      </Container>
+    </div>
   );
 };
 

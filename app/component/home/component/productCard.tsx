@@ -20,7 +20,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
         <p className="">{product.description}</p>
       </div>
       <div className="pb-3 w-full flex flex-row justify-center items-center">
-        <button className="text-center font-semibold shadow-sm h-[40px] w-[60%] mt-5 rounded-lg bg-transparent border-[1px] group-hover:border-none group-hover:bg-secondaryColor text-black group-hover:text-white">
+        <button className="text-center font-semibold shadow-sm h-[40px] w-[60%] mt-5 rounded-lg bg-transparent border-[1px] group-hover:border-none group-hover:bg-secondaryColor bg-primaryColor text-black group-hover:text-white">
           <p className="text-sm">View Detail</p>
         </button>
       </div>

@@ -68,6 +68,8 @@ const Menu: React.FC<any> = ({ isOpen }) => {
         justify-center
         gap-6
         p-5
+        border-t-[1px]
+        mt-4
         "
         >
           {MENU_ITEMS.map((menu, index) => (
