@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter, Nunito } from "next/font/google";
 import Navbar from "./component/navbar/Navbar";
 import AppFooter from "./component/footer/footer";
+import ScrollUpButton from "./component/scrollButton";
 
 const font = Nunito({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <AppFooter/>
+        <ScrollUpButton/>
       </body>
     </html>
   );

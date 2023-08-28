@@ -7,7 +7,7 @@ const Overview = () => {
   return (
     <div
       className="w-full
-       lg:mt-[20px]
+       lg:mt-[140px]
        md:mt-[20px]
        sm:mt-[60px]
        mt-[30px]

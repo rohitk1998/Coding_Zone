@@ -7,6 +7,9 @@ import LinkedIn from "../../public/images/facebook.png"
 import FaceBook from "../../public/images/linkedin.png"
 
 
+import { faFacebook, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
+
+
 
 
 const MENU_ITEMS = [
@@ -112,16 +115,16 @@ const   FOOTER_LINKS  = [
 
 const FOOTER_ICONS = [
   {
-    icon : FaceBook 
+    icon : faTwitter 
   },
   {
-    icon : Instagram 
+    icon : faInstagram 
   },
   {
-    icon : LinkedIn 
+    icon : faLinkedin 
   },
   {
-    icon : Instagram 
+    icon : faFacebook 
   }
 ]
 

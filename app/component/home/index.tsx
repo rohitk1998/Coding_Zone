@@ -4,7 +4,7 @@ import Overview from "./component/overview";
 import IntroCoverImage from "./component/introCover";
 import IntroBadgeContainer from "./component/IntroBadgeComponent";
 import FeaturedProduct from "./component/featuredProduct";
-import MobileDev from "../../../public/images/mobiledev.jpg";
+import MobileDev from "../../../public/images/mobileDev.svg";
 import OurProcess from "./component/ourProcess";
 import Testimonial from "./component/testimonial";
 
@@ -15,17 +15,18 @@ export default function Home() {
       <Container>
         <div
           className="
-            lg:pt-[160px]
-            md:pt-[10px]
-            sm:pt-[40px]
-            pt-[60px]
+            lg:pt-[200px]
+            md:pt-[40px]
+            sm:pt-[60px]
+            pt-[80px]
             grid 
             grid-cols-1 
             sm:grid-cols-1 
             md:grid-cols-1 
             lg:grid-cols-2
             xl:grid-cols-2
-            2xl:grid-cols-2"
+            2xl:grid-cols-2
+            "
         >
           <IntroCoverImage image={MobileDev} />
           <IntroBadgeContainer />
