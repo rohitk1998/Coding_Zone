@@ -1,3 +1,17 @@
+import AndroidIcon from "../../public/images/androidicon.png";
+import IphoneIcon from "../../public/images/iphoneicon.png";
+import WebIcon from "../../public/images/webicon.png";
+import UxIcon from "../../public/images/ui_uxicon.png";
+import Instagram from "../../public/images/instagram.png"
+import LinkedIn from "../../public/images/facebook.png"
+import FaceBook from "../../public/images/linkedin.png"
+
+
+import { faFacebook, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
+
+
+
+
 const MENU_ITEMS = [
   { menuItem: "Home", path: "/" },
   { menuItem: "About", path: "/about" },
@@ -26,30 +40,92 @@ const COMPANY_INFORMATION = [
 
 const WORK_OVERVIEW = [
   {
-    mainHeading: "ANDROID App Development",
+    mainHeading: "ANDROID Development",
     description:
       "We create mobile applications using Native Stacks, Android Studio and Flutter.",
+      icon : AndroidIcon
   },
   {
-    mainHeading: "WEB App Development",
+    mainHeading: "WEB Development",
     description: "We have build sevral Apps, using Reactjs and Nextjs.",
+    icon : WebIcon
   },
   {
-    mainHeading: "WEB App Development",
-    description: "We have build sevral Apps, using Reactjs and Nextjs.",
-  },
-  {
-    mainHeading: "IOS App Development",
+    mainHeading: "IOS Development",
     description: "We create mobile applications using Native Stacks, Xcode.",
+    icon : IphoneIcon
   },
   {
     mainHeading: "UI/UX",
     description: "We have provided best pixel prefect designs.",
-  },
-  {
-    mainHeading: "WEB App Development",
-    description: "We have build sevral Apps, using Reactjs and Nextjs.",
-  },
+    icon : UxIcon
+  }
 ];
 
-export { MENU_ITEMS, COMPANY_INFORMATION,WORK_OVERVIEW };
+const   FOOTER_LINKS  = [
+  {
+    title : "Support",
+    links : [
+      {
+        name : "Documentation" 
+      },
+      {
+        name : "Guidence" 
+      },
+      {
+        name : "Pricing" 
+      },
+      {
+        name : "Contact" 
+      }
+    ]
+  },
+  {
+    title : "Services",
+    links : [
+      {
+        name : "Android Development" 
+      },
+      {
+        name : "Ios Development" 
+      },
+      {
+        name : "Web Development" 
+      },
+      {
+        name : "Marketing" 
+      }
+    ]
+  },
+  {
+    title : "Company",
+    links : [
+      {
+        name : "Contact" 
+      },
+      {
+        name : "About" 
+      },
+      {
+        name : "Gallery" 
+      }
+    ]
+  }
+]
+
+const FOOTER_ICONS = [
+  {
+    icon : faTwitter 
+  },
+  {
+    icon : faInstagram 
+  },
+  {
+    icon : faLinkedin 
+  },
+  {
+    icon : faFacebook 
+  }
+]
+
+export { MENU_ITEMS, COMPANY_INFORMATION,WORK_OVERVIEW,FOOTER_LINKS,FOOTER_ICONS };
