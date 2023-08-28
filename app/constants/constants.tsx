@@ -40,13 +40,13 @@ const COMPANY_INFORMATION = [
 
 const WORK_OVERVIEW = [
   {
-    mainHeading: "ANDROID Development",
+    mainHeading: "Android Development",
     description:
       "We create mobile applications using Native Stacks, Android Studio and Flutter.",
       icon : AndroidIcon
   },
   {
-    mainHeading: "WEB Development",
+    mainHeading: "Web Development",
     description: "We have build sevral Apps, using Reactjs and Nextjs.",
     icon : WebIcon
   },
@@ -56,7 +56,7 @@ const WORK_OVERVIEW = [
     icon : IphoneIcon
   },
   {
-    mainHeading: "UI/UX",
+    mainHeading: "UI/UX Design",
     description: "We have provided best pixel prefect designs.",
     icon : UxIcon
   }
