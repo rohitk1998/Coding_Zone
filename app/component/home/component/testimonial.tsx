@@ -4,95 +4,38 @@ import Container from "../../Container";
 import React, { useEffect, useState } from "react";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
+import Client1 from "../../../../public/images/client1.jpg";
+import ReactStars from 'react-stars';
+import { TESTIMONIAL_SLIDES } from "../../../constants/constants"
 
 let timeoutId: any = null;
 
 const Testimonial = () => {
-  const Slides = [
-    {
-      id: 0,
-      name: "Eleanor",
-      message:
-        "Just wanted to express how grateful I am to be working with such an amazing team! The synergy and positivity here are a constant source of joy. Keep up the fantastic work, everyone!",
-    },
-    {
-      id: 1,
-      name: "Jackson",
-      message:
-        "Every day feels like a new adventure with this team! Your dedication and creativity inspire me to give my best. Here's to more successful collaborations and happy moments together!",
-    },
-    {
-      id: 2,
-      name: "Sophia",
-      message:
-        "Finding joy in my work has never been easier, thanks to this wonderful group. The support we provide one another and the innovative projects we handle make me excited to come in each day. Cheers to a truly fulfilling work environment!",
-    },
-    {
-      id: 3,
-      name: "Oliver",
-      message:
-        "Hey team, I just wanted to let you all know that your camaraderie and the positive vibe you bring to the table are incredibly uplifting. It's not every day you get to work with people who make work feel like a joyous adventure!",
-    },
-    {
-      id: 4,
-      name: "Ava",
-      message:
-        "To my colleagues, thank you for making work feel less like a chore and more like a delightful journey. Your dedication to excellence and the fun we have along the way are the perfect recipe for happiness!",
-    },
-    {
-      id: 5,
-      name: "Liam",
-      message:
-        "Shoutout to the team for fostering an environment where I genuinely look forward to clocking in. The innovative projects and the sense of unity here are a constant source of happiness and motivation!",
-    },
-    {
-      id: 6,
-      name: "Emma",
-      message:
-        "Just a quick note to express my gratitude for being a part of this incredible team. The collaborative spirit and the inspiring work we do make me excited to start my day. Let's keep spreading positivity and achieving great things together!",
-    },
-    {
-      id: 7,
-      name: "Noah",
-      message:
-        "Kudos to my colleagues for creating an environment that turns work into a source of happiness. Your dedication and the seamless teamwork we exhibit truly make each day something to look forward to!",
-    },
-    {
-      id: 8,
-      name: "Isabella",
-      message:
-        "I wanted to take a moment to appreciate this team for making work a truly enjoyable experience. Your professionalism, combined with the friendly atmosphere, remind me every day how fortunate I am to be a part of this!",
-    },
-    {
-      id: 9,
-      name: "William",
-      message:
-        "To my awesome coworkers, your hard work and positivity have made a significant impact on my work life. The collaborative projects and the laughter we share have turned this into a place where happiness thrives. Keep being amazing!",
-    },
-  ];
+
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
     clearTimeout(timeoutId);
     const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? Slides.length - 1 : currentIndex - 1;
+    const newIndex = isFirstSlide ? TESTIMONIAL_SLIDES.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
 
   const nextSlide = () => {
     clearTimeout(timeoutId);
-    const isLastSlide = currentIndex === Slides.length - 1;
+    const isLastSlide = currentIndex === TESTIMONIAL_SLIDES.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
 
   const startSlider = () => {
-    const isLastSlide = currentIndex === Slides.length - 1;
+    const isLastSlide = currentIndex === TESTIMONIAL_SLIDES.length - 1;
     timeoutId = setTimeout(() => {
       const newIndex = isLastSlide ? 0 : currentIndex + 1;
       setCurrentIndex(newIndex);
-    }, 2000);
+    }, 5000);
   };
 
   const goToSlide = (slideIndex: any) => {
@@ -129,7 +72,7 @@ const Testimonial = () => {
                 </p>
               </div>
             </div>
-            <div className="group w-full xl:w-[80%] flex flex-col items-center justify-end py-10 relative mt-6">
+            <div className="group w-full xl:w-[60%] flex flex-col items-center justify-end py-10 relative mt-6">
               <div
                 className={`flex flex-col items-center
          justify-center rounded-[20px]
@@ -137,22 +80,41 @@ const Testimonial = () => {
            bg-white
            px-2
            py-6
+           w-[100%]
            `}
               >
-                {Slides.map((slide, idx) => {
+                {TESTIMONIAL_SLIDES.map((slide, idx) => {
                   return (
                     <>
                       {idx === currentIndex && (
                         <div
-                          className={`lg:h-[180px] xl:h-[180px] md:h-[180px] h-[180px] w-[80%] 
-                       `}
+                          className={`lg:h-[180px] xl:h-[180px] md:h-[180px] w-[70%] h-[180px] flex flex-col justify-center items-start`}
                         >
-                          <h6 className="mb-1 text-md font-bold text-black md:text-xl lg:text-xl ml-2">
-                            {slide.name}
-                          </h6>
-                          <p className="mb-1 text-sm font-normal text-gray-500 md:text-lg lg:text-lg ml-2">
-                            {slide.message}
+                          <div className="w-full flex flex-row items-center justify-start">
+                            <Image
+                              alt="sdasd"
+                              src={slide.clientImage}
+                              width={40}
+                              height={40}
+                              className="w-[50px] h-[50px] shadow-lg rounded-full object-cover"
+                            />
+                            <h6 className="mb-1 text-md font-bold text-black md:text-xl lg:text-xl ml-3">
+                              {slide.clientName}
+                            </h6>
+                          </div>
+                          <div className="w-full flex flex-row items-center justify-start mt-3">
+                          <p className="mb-1 text-sm font-normal text-gray-500 md:text-lg lg:text-lg">
+                            {slide.clientMessage}
                           </p>
+                          </div>
+                          <div className="w-full flex flex-row items-center justify-start">
+                            <ReactStars
+                              count={slide.ratingCount}
+                              // color1={"red"}
+                              size={24}
+                              color1="#ffd700"
+                            />
+                          </div>
                         </div>
                       )}
                     </>
@@ -174,7 +136,7 @@ const Testimonial = () => {
                 <FontAwesomeIcon icon={faArrowRight} color="black" />
               </div>
               <div className="flex top-4 justify-center py-2">
-                {Slides.map((slide, slideIndex) => (
+                {TESTIMONIAL_SLIDES.map((slide, slideIndex) => (
                   <div
                     key={slideIndex}
                     onClick={() => goToSlide(slideIndex)}
