@@ -151,7 +151,7 @@ const TESTIMONIAL_SLIDES = [
     clientImage: john,
     ratingCount: 4,
     messageTitle:
-      "Highly recommended kashish and his team created for me my first website and app (iOS & Android)including booking system and payment method in both websites and app.",
+      "Highly recommended kashish and his team created for me my first website and app (iOS & Android).",
     clientMessage: `Highly recommended kashish and his team created for me my first website and app (iOS & Android)including booking system and payment method in both websites and app , thank you guys was not easy specially I do
     not have experience with those things as first website, job done successfully ,kashish always available even with the different time gaps and always smiling a comprehensive in the difficult times , well done we still have a lots of work to do together and big thanks your team to make my dream business happen and real.`,
   },
