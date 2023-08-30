@@ -125,7 +125,7 @@ const Testimonial = () => {
                             <div className="w-full flex flex-row items-center justify-start mt-3">
                               <p className="mb-1 text-sm font-normal text-gray-500 md:text-lg lg:text-lg">
                                 {slide.messageTitle}
-                                <button className="bg-secondaryColor rounded-md text-white px-2 ml-1"
+                                <button className="bg-secondaryColor rounded-md text-white px-2 ml-1 shadow-md"
                                 onClick={()=> onOpen(slide)}
                                 >
                                   more
@@ -181,7 +181,7 @@ const Testimonial = () => {
           </div>
         </div>
       </div>
-      <CommonModal isVisible={isModalVisible} onClose={onClose}>
+      <CommonModal isVisible={isModalVisible} onClose={onClose} modalTitle="Client's Review">
         <ClientReviewModal reviewObj={modalContent} />
       </CommonModal>
     </Container>

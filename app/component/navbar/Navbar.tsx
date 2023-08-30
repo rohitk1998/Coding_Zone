@@ -19,7 +19,7 @@ const Navbar = () => {
   };
   return (
     <div className="fixed w-full bg-transparent z-10 bg-white lg:border-none border-b-[1px] lg:shadow-sm shadow-sm">
-      <div className="py-4">
+      <div className="py-1">
         <Container>
           <div className="flex flex-row items-center justify-between ">
             <Logo />

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
 import Reveal from "../../reveal";
 
@@ -21,7 +20,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
         <h3 className="text-2xl font-bold mb-2">{product.name}</h3>
         </Reveal>
         <Reveal className="">
-        <p className="text-md font-medium text-gray-700 mb-2">{product.description.slice(0,150) + "..."}</p>
+        <p className="text-md font-medium text-gray-700 group-hover:text-white mb-2">{product.description.slice(0,150) + "..."}</p>
         </Reveal>
       </div>
       <div className="pb-3 w-full flex flex-row justify-center items-center">

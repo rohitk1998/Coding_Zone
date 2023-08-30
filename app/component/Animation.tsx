@@ -71,7 +71,7 @@ const BackgroundAnimation = () => {
           number: {
             density: {
               enable: true,
-              area: 2000
+              area: 3000
             },
             value: 80
           },
