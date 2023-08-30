@@ -1,10 +1,12 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Nunito } from "next/font/google";
-import Navbar from "./component/navbar/Navbar";
-import AppFooter from "./component/footer/footer";
-import ScrollUpButton from "./component/scrollButton";
-import BackgroundAnimation from "./component/Animation";
+import { Nunito } from "next/font/google";
+import {
+  BackgroundAnimation,
+  ScrollUpButton,
+  Navbar,
+  AppFooter,
+} from "./component";
 
 const font = Nunito({ subsets: ["latin"] });
 
@@ -23,9 +25,9 @@ export default function RootLayout({
       <body className={font.className}>
         <Navbar />
         {children}
-        <AppFooter/>
-        <ScrollUpButton/>
-        <BackgroundAnimation/>
+        <AppFooter />
+        <ScrollUpButton />
+        <BackgroundAnimation />
       </body>
     </html>
   );

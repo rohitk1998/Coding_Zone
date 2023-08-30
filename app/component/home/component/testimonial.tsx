@@ -5,16 +5,19 @@ import React, { useEffect, useState } from "react";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-import Client1 from "../../../../public/images/client1.jpg";
 import ReactStars from "react-stars";
 import { TESTIMONIAL_SLIDES } from "../../../constants/constants";
 import RevealRight from "../../revealRight";
 import Reveal from "../../reveal";
+import { CommonModal } from "../..";
+import ClientReviewModal from "./clientReviewModal";
 
 let timeoutId: any = null;
 
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isModalVisible, setIsModalVisble] = useState(false);
+  const [modalContent, setModalContent] = useState({});
 
   const prevSlide = () => {
     clearTimeout(timeoutId);
@@ -49,6 +52,16 @@ const Testimonial = () => {
     startSlider();
   }, [currentIndex]);
 
+  const onClose = () => {
+    setModalContent({})
+    setIsModalVisble(false);
+  };
+
+  const onOpen = (obj : object) => {
+    setModalContent(obj)
+    setIsModalVisble(true);
+  };
+
   return (
     <Container>
       <div className="w-full mx-auto mb-10 mt-[30px]">
@@ -64,7 +77,7 @@ const Testimonial = () => {
       grid-cols-1
       "
           >
-            <div className="w-full flex flex-row lg:items-start lg:justify-end md:items-start md:justify-center items-center justify-center px-7 py-10">
+            <div className="w-full flex flex-row lg:items-center lg:justify-end md:items-start md:justify-center items-center justify-center px-6 py-0">
               <div className="lg:w-[70%] md:w-[60%] flex flex-col items-start justify-start">
                 <Reveal className="">
                   <h2 className="xl:text-6xl lg:text-6xl font-bold tracking-tight text-white sm:text-4xl text-4xl">
@@ -78,7 +91,7 @@ const Testimonial = () => {
                 </Reveal>
               </div>
             </div>
-            <div className="group w-full xl:w-[60%] flex flex-col items-center justify-end py-10 relative mt-6">
+            <div className="group w-full xl:w-[60%] flex flex-col items-center justify-end py-5 relative mt-6">
               <div
                 className={`flex flex-col items-center
          justify-center rounded-[20px]
@@ -98,20 +111,25 @@ const Testimonial = () => {
                         >
                           <RevealRight className="w-[100%] bg-slate-600">
                             <div className="w-full flex flex-row items-center justify-start">
-                              <Image
+                              {/* <Image
                                 alt="sdasd"
                                 src={slide.clientImage}
                                 width={40}
                                 height={40}
                                 className="w-[50px] h-[50px] shadow-lg rounded-full object-cover"
-                              />
-                              <h6 className="mb-1 text-md font-bold text-black md:text-xl lg:text-xl ml-3">
+                              /> */}
+                              <h6 className="mb-1 text-md font-bold text-black md:text-xl lg:text-xl">
                                 {slide.clientName}
                               </h6>
                             </div>
                             <div className="w-full flex flex-row items-center justify-start mt-3">
                               <p className="mb-1 text-sm font-normal text-gray-500 md:text-lg lg:text-lg">
-                                {slide.clientMessage}
+                                {slide.messageTitle}
+                                <button className="bg-secondaryColor rounded-md text-white px-2 ml-1"
+                                onClick={()=> onOpen(slide)}
+                                >
+                                  more
+                                </button>
                               </p>
                             </div>
                             <div className="w-full flex flex-row items-center justify-start">
@@ -163,6 +181,9 @@ const Testimonial = () => {
           </div>
         </div>
       </div>
+      <CommonModal isVisible={isModalVisible} onClose={onClose}>
+        <ClientReviewModal reviewObj={modalContent} />
+      </CommonModal>
     </Container>
   );
 };
