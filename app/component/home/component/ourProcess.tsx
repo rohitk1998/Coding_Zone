@@ -4,8 +4,22 @@ import Container from "../../Container";
 import IntroCoverImage from "./introCover";
 import ContactImage from "../../../../public/images/contactimage.jpg";
 import Reveal from "../../reveal";
+import { useState } from "react";
+import { CommonModal } from "../..";
 
 const OurProcess = () => {
+
+  const [isModalOpen,setIsModalOpen] = useState(false) ; 
+
+
+  const handleQuery = ()=> {
+    setIsModalOpen(true)
+  }
+
+  const onClose = ()=> {
+    setIsModalOpen(false)
+  }
+
   return (
     <Container>
       <div className="w-[75%] mx-auto flex flex-col items-center xl:justify-center lg:justify-cetner justify-center rounded-[20px]">
@@ -38,6 +52,7 @@ const OurProcess = () => {
                       type="text"
                       name="first-name"
                       id="first-name"
+                      required={true}
                       className="block w-full rounded-md outline-none px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-primaryColor placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondaryColor sm:text-sm sm:leading-6"
                     />
                   </div>
@@ -54,6 +69,7 @@ const OurProcess = () => {
                       type="email"
                       name="email"
                       id="email"
+                      required={true}
                       className="block w-full outline-none rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-primaryColor placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondaryColor sm:text-sm sm:leading-6"
                     />
                   </div>
@@ -70,6 +86,7 @@ const OurProcess = () => {
                       type="text"
                       name="phonenumber"
                       id="number"
+                      required={true}
                       className="block w-full outline-none rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-primaryColor placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondaryColor sm:text-sm sm:leading-6"
                     />
                   </div>
@@ -85,6 +102,7 @@ const OurProcess = () => {
                     <textarea
                       name="message"
                       id="message"
+                      required={true}
                       className="block w-full outline-none rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-primaryColor placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondaryColor sm:text-sm sm:leading-6"
                     ></textarea>
                   </div>
@@ -94,6 +112,7 @@ const OurProcess = () => {
                 <button
                   type="submit"
                   className="block w-full rounded-md bg-secondaryColor px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-orange-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                   onClick={handleQuery}
                 >
                   Let's talk
                 </button>
@@ -102,6 +121,21 @@ const OurProcess = () => {
           </div>
         </div>
       </div>
+      <CommonModal isVisible={isModalOpen} onClose={onClose} modalTitle="">
+        <div
+        className="w-full min-w-full xl:overflow-hidden
+        lg:overflow-y-scroll md:overflow-y-scroll
+         overflow-y-scroll bg-white flex flex-row 
+       justify-center items-center rounded-b-lg pt-4
+       mt-4
+       "
+        >
+          <h1 className="text-xl text-green-600 mb-5">
+          Congratulations !! <br/>
+          Your Query has been successfully submitted
+          </h1>
+        </div>
+      </CommonModal>
     </Container>
   );
 };

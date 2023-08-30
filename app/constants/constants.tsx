@@ -2,14 +2,11 @@ import AndroidIcon from "../../public/images/androidicon.png";
 import IphoneIcon from "../../public/images/iphoneicon.png";
 import WebIcon from "../../public/images/webicon.png";
 import UxIcon from "../../public/images/ui_uxicon.png";
-import sanaya from "../../public/images/snaya.jpg";
 import liam from "../../public/images/liam.jpg";
 import john from "../../public/images/john.jpg";
 import denial from "../../public/images/denial.jpg";
-import gola from "../../public/images/gola.jpg";
-import pooja from "../../public/images/client1.jpg";
 import pinto from "../../public/images/pinto.jpg";
-import shilpa from "../../public/images/shilpa.jpg";
+
 
 import {
   faFacebook,
@@ -48,7 +45,7 @@ const WORK_OVERVIEW = [
   {
     mainHeading: "Android Development",
     description:
-      "We create mobile applications using Native Stacks, Android Studio and Flutter.",
+      "We create mobile app using Android Studio and Flutter.",
     icon: AndroidIcon,
   },
   {
@@ -147,7 +144,7 @@ const TESTIMONIAL_SLIDES = [
   },
   {
     id: 1,
-    clientName: "Chadi",
+    clientName: "Chadi Msakni",
     clientImage: john,
     ratingCount: 4,
     messageTitle:
