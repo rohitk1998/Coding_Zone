@@ -16,7 +16,7 @@ export default function Home() {
       <Container>
         <div
           className="
-            lg:pt-[200px]
+            lg:pt-[250px]
             xl:pt-[150px]
             md:pt-[40px]
             sm:pt-[60px]

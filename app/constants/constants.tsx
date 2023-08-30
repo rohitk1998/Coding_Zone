@@ -137,73 +137,43 @@ const FOOTER_ICONS = [
 const TESTIMONIAL_SLIDES = [
   {
     id: 0,
-    clientName: "Daniel Martinez",
+    clientName: "Robert",
     clientImage: denial,
     ratingCount: 5,
-    clientMessage: "Top-notch service! Highly satisfied.",
+    messageTitle:
+      "It was an absolute pleasure working with Kashish. He did the job well and was able to communicate issues and roadblocks effectively.",
+    clientMessage:
+      "It was an absolute pleasure working with Kashish. He did the job well and was able to communicate issues and roadblocks effectively.",
   },
   {
     id: 1,
-    clientName: "John Doe",
+    clientName: "Chadi",
     clientImage: john,
-    ratingCount: 5,
-    clientMessage: "Great service! Highly recommended.",
+    ratingCount: 4,
+    messageTitle:
+      "Highly recommended kashish and his team created for me my first website and app (iOS & Android)including booking system and payment method in both websites and app.",
+    clientMessage: `Highly recommended kashish and his team created for me my first website and app (iOS & Android)including booking system and payment method in both websites and app , thank you guys was not easy specially I do
+    not have experience with those things as first website, job done successfully ,kashish always available even with the different time gaps and always smiling a comprehensive in the difficult times , well done we still have a lots of work to do together and big thanks your team to make my dream business happen and real.`,
   },
   {
     id: 2,
     clientName: "Jane Smith",
     clientImage: pinto,
-    ratingCount: 4,
-    clientMessage: "Had a good experience overall.",
+    ratingCount: 5,
+    messageTitle:
+      "Working with Kashish Kumar was an absolute pleasure. They demonstrated exceptional skills and professionalism throughout the entire project.",
+    clientMessage:
+      "Working with Kashish Kumar was an absolute pleasure. They demonstrated exceptional skills and professionalism throughout the entire project. I was amazed by their ability to understand the requirements and deliver outstanding results in such a short time frame.",
   },
   {
     id: 3,
-    clientName: "Alice Johnson",
+    clientName: "Bikram sekhon ",
     clientImage: liam,
-    ratingCount: 3,
-    clientMessage: "Decent service, but room for improvement.",
-  },
-  {
-    id: 4,
-    clientName: "Bob Williams",
-    clientImage: john,
-    ratingCount: 5,
-    clientMessage: "Outstanding service! Will come back again.",
-  },
-  {
-    id: 5,
-    clientName: "Eve Davis",
-    clientImage: gola,
-    ratingCount: 5,
-    clientMessage: "Extraordinary Work done by Team.",
-  },
-  {
-    id: 6,
-    clientName: "Alex Turner",
-    clientImage: pooja,
     ratingCount: 4,
-    clientMessage: "Good service, friendly staff.",
-  },
-  {
-    id: 7,
-    clientName: "Olivia Brown",
-    clientImage: shilpa,
-    ratingCount: 5,
-    clientMessage: "Exceptional experience overall!",
-  },
-  {
-    id: 8,
-    clientName: "William Harris",
-    clientImage: denial,
-    ratingCount: 4,
-    clientMessage: "Excellent Service,Happy with team work.",
-  },
-  {
-    id: 9,
-    clientName: "Sophia Wilson",
-    clientImage: pooja,
-    ratingCount: 4,
-    clientMessage: "Had a pleasant time at the establishment.",
+    messageTitle:
+      "He did a very good job within timeline. Hired him permanently for all our web development work.",
+    clientMessage:
+      "He did a very good job within timeline. Hired him permanently for all our web development work.",
   },
 ];
 
@@ -213,5 +183,5 @@ export {
   WORK_OVERVIEW,
   FOOTER_LINKS,
   FOOTER_ICONS,
-  TESTIMONIAL_SLIDES
+  TESTIMONIAL_SLIDES,
 };

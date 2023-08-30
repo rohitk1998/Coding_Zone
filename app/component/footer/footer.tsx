@@ -8,6 +8,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { faLocationPin,faEnvelope,faPhone } from "@fortawesome/free-solid-svg-icons";
 import IndianFlag from "../../../public/images/india.png";
+import LocationPin from "../../../public/images/location.png"
+import { FaIconComponent } from "..";
 
 const AppFooter = () => {
   return (
@@ -18,14 +20,7 @@ const AppFooter = () => {
             className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}
           >
             <div className="flex-1 flex flex-col justify-start mr-10">
-              <Logo />
-              <p
-                className={`mt-4 max-w-[100%] text-xl text-secondaryColor`}
-              >
-                Making the world a better place through constructing <br />
-                elegant hierarchies.
-              </p>
-              <div className="w-[50%] flex-col flex items-start justify-start mt-7">
+              <div className="w-[50%] flex-col flex items-start justify-start">
                 <div className="w-full flex flex-row items-center justify-start py-3">
                   <Image
                     alt="sdasd"
@@ -39,17 +34,10 @@ const AppFooter = () => {
                   </p>
                 </div>
                 <div className="w-full flex flex-row items-start justify-start py-3">
-                  <FontAwesomeIcon
-                    icon={faLocationPin}
-                    style={{
-                      color: "gray",
-                      width: "25px",
-                      height: "25px",
-                      marginTop:5
-                    }}
-                    className={`
-              cursor-pointer
-              `}
+                  <Image
+                    alt="location Pin"
+                    src={LocationPin}
+                    className="w-[20px] h-[20px] shadow-lg"
                   />
                   <p
                     className={`max-w-[100%] text-md font-normal text-gray-400 ml-2`}
@@ -58,17 +46,17 @@ const AppFooter = () => {
                   </p>
                 </div>
                 <div className="w-full flex flex-row items-start justify-start py-3">
-                  <FontAwesomeIcon
-                    icon={faEnvelope}
-                    style={{
-                      color: "gray",
-                      width: "25px",
-                      height: "25px",
-                      marginTop:5
-                    }}
-                    className={`
-              cursor-pointer
-              `}
+                  <FaIconComponent
+                   iconName={faEnvelope}
+                   iconStyle={{
+                     color: "black",
+                     width: "20px",
+                     height: "20px",
+                     marginTop:0
+                   }}
+                   className={`
+             cursor-pointer
+             `}
                   />
                   <p
                     className={`max-w-[100%] text-md font-normal text-gray-400 ml-2`}
@@ -77,12 +65,12 @@ const AppFooter = () => {
                   </p>
                 </div>
                 <div className="w-full flex flex-row items-start justify-start py-3">
-                  <FontAwesomeIcon
-                    icon={faPhone}
-                    style={{
-                      color: "gray",
-                      width: "25px",
-                      height: "25px",
+                  <FaIconComponent
+                    iconName={faPhone}
+                    iconStyle={{
+                      color: "black",
+                      width: "20px",
+                      height: "20px",
                     }}
                     className={`
               cursor-pointer
