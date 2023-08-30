@@ -4,18 +4,20 @@ import Overview from "./component/overview";
 import IntroCoverImage from "./component/introCover";
 import IntroBadgeContainer from "./component/IntroBadgeComponent";
 import FeaturedProduct from "./component/featuredProduct";
-import MobileDev from "../../../public/images/mobileDev.svg";
+import Coding2 from "../../../public/images/coding2.svg";
 import OurProcess from "./component/ourProcess";
 import Testimonial from "./component/testimonial";
 
 export default function Home() {
+
   return (
     <>
       {/* Intro Section End */}
       <Container>
         <div
           className="
-            lg:pt-[250px]
+            lg:pt-[200px]
+            xl:pt-[150px]
             md:pt-[40px]
             sm:pt-[60px]
             pt-[80px]
@@ -28,7 +30,7 @@ export default function Home() {
             2xl:grid-cols-2
             "
         >
-          <IntroCoverImage image={MobileDev} />
+          <IntroCoverImage image={Coding2} />
           <IntroBadgeContainer />
         </div>
         {/* Intro Section End */}

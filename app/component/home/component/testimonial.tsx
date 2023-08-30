@@ -6,20 +6,22 @@ import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Client1 from "../../../../public/images/client1.jpg";
-import ReactStars from 'react-stars';
-import { TESTIMONIAL_SLIDES } from "../../../constants/constants"
+import ReactStars from "react-stars";
+import { TESTIMONIAL_SLIDES } from "../../../constants/constants";
+import RevealRight from "../../revealRight";
+import Reveal from "../../reveal";
 
 let timeoutId: any = null;
 
 const Testimonial = () => {
-
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
     clearTimeout(timeoutId);
     const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? TESTIMONIAL_SLIDES.length - 1 : currentIndex - 1;
+    const newIndex = isFirstSlide
+      ? TESTIMONIAL_SLIDES.length - 1
+      : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
 
@@ -64,12 +66,16 @@ const Testimonial = () => {
           >
             <div className="w-full flex flex-row lg:items-start lg:justify-end md:items-start md:justify-center items-center justify-center px-7 py-10">
               <div className="lg:w-[70%] md:w-[60%] flex flex-col items-start justify-start">
-                <h2 className="xl:text-6xl lg:text-6xl font-bold tracking-tight text-white sm:text-4xl text-4xl">
-                  What our clients say
-                </h2>
-                <p className="mt-3 text-lg leading-8 text-gray-100">
-                  Testimonials
-                </p>
+                <Reveal className="">
+                  <h2 className="xl:text-6xl lg:text-6xl font-bold tracking-tight text-white sm:text-4xl text-4xl">
+                    What our clients say
+                  </h2>
+                </Reveal>
+                <Reveal className="">
+                  <p className="mt-3 text-lg leading-8 text-gray-100">
+                    Testimonials
+                  </p>
+                </Reveal>
               </div>
             </div>
             <div className="group w-full xl:w-[60%] flex flex-col items-center justify-end py-10 relative mt-6">
@@ -90,31 +96,32 @@ const Testimonial = () => {
                         <div
                           className={`lg:h-[180px] xl:h-[180px] md:h-[180px] w-[70%] h-[180px] flex flex-col justify-center items-start`}
                         >
-                          <div className="w-full flex flex-row items-center justify-start">
-                            <Image
-                              alt="sdasd"
-                              src={slide.clientImage}
-                              width={40}
-                              height={40}
-                              className="w-[50px] h-[50px] shadow-lg rounded-full object-cover"
-                            />
-                            <h6 className="mb-1 text-md font-bold text-black md:text-xl lg:text-xl ml-3">
-                              {slide.clientName}
-                            </h6>
-                          </div>
-                          <div className="w-full flex flex-row items-center justify-start mt-3">
-                          <p className="mb-1 text-sm font-normal text-gray-500 md:text-lg lg:text-lg">
-                            {slide.clientMessage}
-                          </p>
-                          </div>
-                          <div className="w-full flex flex-row items-center justify-start">
-                            <ReactStars
-                              count={slide.ratingCount}
-                              // color1={"red"}
-                              size={24}
-                              color1="#ffd700"
-                            />
-                          </div>
+                          <RevealRight className="w-[100%] bg-slate-600">
+                            <div className="w-full flex flex-row items-center justify-start">
+                              <Image
+                                alt="sdasd"
+                                src={slide.clientImage}
+                                width={40}
+                                height={40}
+                                className="w-[50px] h-[50px] shadow-lg rounded-full object-cover"
+                              />
+                              <h6 className="mb-1 text-md font-bold text-black md:text-xl lg:text-xl ml-3">
+                                {slide.clientName}
+                              </h6>
+                            </div>
+                            <div className="w-full flex flex-row items-center justify-start mt-3">
+                              <p className="mb-1 text-sm font-normal text-gray-500 md:text-lg lg:text-lg">
+                                {slide.clientMessage}
+                              </p>
+                            </div>
+                            <div className="w-full flex flex-row items-center justify-start">
+                              <ReactStars
+                                count={slide.ratingCount}
+                                size={24}
+                                color1="#ffd700"
+                              />
+                            </div>
+                          </RevealRight>
                         </div>
                       )}
                     </>

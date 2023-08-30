@@ -1,0 +1,16 @@
+/* TextClippingMask.css */
+.text-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden; /* Hide any overflowing content */
+  }
+  
+  .covered-text {
+    position: relative;
+    z-index: 2;
+    color: transparent; /* Make the text transparent */
+    background: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)); /* Use a gradient for the clipping mask */
+    -webkit-background-clip: text; /* Apply the background to the text */
+    background-clip: text;
+  }
+  

@@ -2,6 +2,7 @@
 import { COMPANY_INFORMATION } from "@/app/constants/constants";
 import InfoBadge from "./infoBadge";
 import OverviewHeading from "./overviewHeading";
+import Reveal from "../../reveal";
 
 const Overview = () => {
   return (
@@ -19,6 +20,8 @@ const Overview = () => {
       "
     >
       <OverviewHeading />
+      <Reveal className="w-full">
+
       <div
         className="
            grid 
@@ -30,16 +33,20 @@ const Overview = () => {
            2xl:grid-cols-4
            "
       >
+
         {COMPANY_INFORMATION.map((item, index) => {
           return (
-            <InfoBadge
+             <InfoBadge
               item1={item.totalYr}
               item2={item.description}
               key={index}
             />
-          );
+           
+          )
         })}
       </div>
+      </Reveal>
+
     </div>
   );
 };
