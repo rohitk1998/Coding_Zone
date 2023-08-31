@@ -9,15 +9,11 @@ const BackgroundAnimation = () => {
     await loadSlim(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container : any ) => {
-    await console.log(container);
-  }, []);
 
   return (
     <Particles
       id="tsparticles"
       init={particlesInit}
-      loaded={particlesLoaded}
       options={{
         background: {
           color: {
@@ -28,7 +24,7 @@ const BackgroundAnimation = () => {
         interactivity: {
           events: {
             onClick: {
-              enable: true,
+              enable: false,
               mode: "push"
             },
             onHover: {

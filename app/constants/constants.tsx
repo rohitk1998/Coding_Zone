@@ -5,7 +5,9 @@ import UxIcon from "../../public/images/ui_uxicon.png";
 import liam from "../../public/images/liam.jpg";
 import john from "../../public/images/john.jpg";
 import denial from "../../public/images/denial.jpg";
-import pinto from "../../public/images/pinto.jpg";
+import WeHandleYourPets from "../../public/images/wehandleyourpetsImg.png"
+import DiscoverAddisAbaba from "../../public/images/discoveraddisababa.png"
+import SiraApp from "../../public/images/siraapp.png"
 
 
 import {
@@ -152,16 +154,16 @@ const TESTIMONIAL_SLIDES = [
     clientMessage: `Highly recommended kashish and his team created for me my first website and app (iOS & Android)including booking system and payment method in both websites and app , thank you guys was not easy specially I do
     not have experience with those things as first website, job done successfully ,kashish always available even with the different time gaps and always smiling a comprehensive in the difficult times , well done we still have a lots of work to do together and big thanks your team to make my dream business happen and real.`,
   },
-  {
-    id: 2,
-    clientName: "Jane Smith",
-    clientImage: pinto,
-    ratingCount: 5,
-    messageTitle:
-      "Working with Kashish Kumar was an absolute pleasure. They demonstrated exceptional skills and professionalism throughout the entire project.",
-    clientMessage:
-      "Working with Kashish Kumar was an absolute pleasure. They demonstrated exceptional skills and professionalism throughout the entire project. I was amazed by their ability to understand the requirements and deliver outstanding results in such a short time frame.",
-  },
+  // {
+  //   id: 2,
+  //   clientName: "Jane Smith",
+  //   clientImage: pinto,
+  //   ratingCount: 5,
+  //   messageTitle:
+  //     "Working with Kashish Kumar was an absolute pleasure. They demonstrated exceptional skills and professionalism throughout the entire project.",
+  //   clientMessage:
+  //     "Working with Kashish Kumar was an absolute pleasure. They demonstrated exceptional skills and professionalism throughout the entire project. I was amazed by their ability to understand the requirements and deliver outstanding results in such a short time frame.",
+  // },
   {
     id: 3,
     clientName: "Bikram sekhon ",
@@ -174,6 +176,31 @@ const TESTIMONIAL_SLIDES = [
   },
 ];
 
+const PRODUCED_APPS = [
+  {
+       "id":0 ,
+      "name": "Discover addis ababa",
+      "image": DiscoverAddisAbaba,
+      "description": "A tourism app that helps tourists to addis ababa to discover destinations.",
+      "link":"https://apps.apple.com/in/app/discover-addis-ababa/id6449370651"
+  },
+  {
+      "id":1,
+      "name": "We Handle Your Pets",
+      "image": WeHandleYourPets,
+      "description": "We love pets!, That's why 'we handle your pets' are offering different ranges of services to suit your pets needs.",
+      "link":"https://apps.apple.com/in/app/we-handle-your-pets/id6451211817"
+  },
+  {
+    "id":2 , 
+    "name":"Sira",
+    "image": SiraApp, 
+    "description" : "Sira is a professionals market place in Addis Ababa. The platform lists professionals in their respective fields." , 
+    "link":"https://apps.apple.com/app/id6450408801"
+
+  }
+]
+
 export {
   MENU_ITEMS,
   COMPANY_INFORMATION,
@@ -181,4 +208,5 @@ export {
   FOOTER_LINKS,
   FOOTER_ICONS,
   TESTIMONIAL_SLIDES,
+  PRODUCED_APPS
 };
