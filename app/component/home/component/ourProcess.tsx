@@ -6,19 +6,33 @@ import ContactImage from "../../../../public/images/contactimage.jpg";
 import Reveal from "../../reveal";
 import { useState } from "react";
 import { CommonModal } from "../..";
+import { useForm } from "react-hook-form";
 
 const OurProcess = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const [isModalOpen,setIsModalOpen] = useState(false) ; 
+  const handleQuery = () => {
+    setIsModalOpen(true);
+  };
 
+  const onClose = () => {
+    setIsModalOpen(false);
+  };
 
-  const handleQuery = ()=> {
-    setIsModalOpen(true)
-  }
-
-  const onClose = ()=> {
-    setIsModalOpen(false)
-  }
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    getValues,
+    reset
+  } = useForm({
+    defaultValues : {
+      name : "" , 
+      email  : "" , 
+      phone : "" , 
+      message : ""
+    }
+  });
 
   return (
     <Container>
@@ -37,102 +51,104 @@ const OurProcess = () => {
       <div className="w-[95%] mx-auto flex flex-col items-center xl:justify-center lg:justify-cetner justify-center rounded-[20px]">
         <div className="grid lg:grid-cols-2 grid-cols-1 xl:grid-cols-2 p-4 bg-white md:grid-cols-2">
           <IntroCoverImage image={ContactImage} />
-          <div className="isolate bg-transparent mt-[30px]">
-            <div className="xl:mx-[0px] lg:mx-[0px] md:mx-[0px] mx-auto max-w-xl sm:mt-20">
-              <div className="grid grid-cols-1 gap-y-6 sm:grid-cols-2">
-                <div className="sm:col-span-2">
-                  <label
-                    htmlFor="first-name"
-                    className="block text-sm font-semibold leading-6 text-gray-900"
-                  >
-                    Name
-                  </label>
-                  <div className="mt-2.5">
-                    <input
-                      type="text"
-                      name="first-name"
-                      id="first-name"
-                      required={true}
-                      className="block w-full rounded-md outline-none px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-primaryColor placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondaryColor sm:text-sm sm:leading-6"
-                    />
-                  </div>
-                </div>
-                <div className="sm:col-span-2">
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-semibold leading-6 text-gray-900"
-                  >
-                    Email
-                  </label>
-                  <div className="mt-2.5">
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      required={true}
-                      className="block w-full outline-none rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-primaryColor placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondaryColor sm:text-sm sm:leading-6"
-                    />
-                  </div>
-                </div>
-                <div className="sm:col-span-2">
-                  <label
-                    htmlFor="phonenumber"
-                    className="block text-sm font-semibold leading-6 text-gray-900"
-                  >
-                    Phone Number
-                  </label>
-                  <div className="mt-2.5">
-                    <input
-                      type="text"
-                      name="phonenumber"
-                      id="number"
-                      required={true}
-                      className="block w-full outline-none rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-primaryColor placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondaryColor sm:text-sm sm:leading-6"
-                    />
-                  </div>
-                </div>
-                <div className="sm:col-span-2">
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-semibold leading-6 text-gray-900"
-                  >
-                    Message
-                  </label>
-                  <div className="mt-2.5">
-                    <textarea
-                      name="message"
-                      id="message"
-                      required={true}
-                      className="block w-full outline-none rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-primaryColor placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondaryColor sm:text-sm sm:leading-6"
-                    ></textarea>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-10">
-                <button
-                  type="submit"
-                  className="block w-full rounded-md bg-secondaryColor px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-orange-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                   onClick={handleQuery}
-                >
-                  Let's talk
-                </button>
-              </div>
+          <form
+            className="xl:w-[70%] lg:w-[70%] md:w-[70%] sm:w-[100%] w-[100%] flex flex-col 
+            xl:justify-center xl:items-start
+            lg:justify-center lg:items-start
+            md:justify-center md:items-center
+            sm:justify-center sm:items-center
+            justify-center items-center
+            
+            "
+            onSubmit={handleSubmit((data) => {
+              handleQuery();
+              reset({
+                name : "" , 
+                email  : "" , 
+                phone : "" , 
+                message : ""
+              })
+            })}
+          >
+            <div className="w-[100%] flex flex-col items-start justify-start pt-5 px-4 mb-1">
+              <label className="text-md font-normal text-gray-600">Name</label>
+              <input
+                className="outline-none text-black h-[35px] w-full pl-2 rounded-sm shadow-sm border-b-[1px] border-gray-400"
+                {...register("name", {
+                  required: true,
+                })}
+                value={getValues("name")}
+              />
+              {errors.name && (
+                <p className="text-red-600">Please enter your name</p>
+              )}
             </div>
-          </div>
+            <div className="w-[100%] flex flex-col items-start justify-start pt-5 px-4 mb-1">
+              <label className="text-md font-normal text-gray-600">Email</label>
+              <input
+                className="outline-none text-black h-[35px] w-full pl-2 rounded-sm shadow-sm border-b-[1px] border-gray-400"
+                {...register("email", {
+                  required: true,
+                  maxLength: 10,
+                })}
+                value={getValues("email")}
+              />
+              {errors.email && (
+                <p className="text-red-600">Please enter your email</p>
+              )}
+            </div>
+            <div className="w-[100%] flex flex-col items-start justify-start pt-5 px-4 mb-1">
+              <label className="text-md font-normal text-gray-600">
+                Phone Number
+              </label>
+              <input
+                className="outline-none text-black h-[35px] w-full pl-2 rounded-sm shadow-sm border-b-[1px] border-gray-400"
+                {...register("phone", {
+                  required: true,
+                })}
+                value={getValues("phone")}
+              />
+              {errors.phone && (
+                <p className="text-red-600">Please enter your phone number</p>
+              )}
+            </div>
+
+            <div className="w-[100%] flex flex-col items-start justify-start pt-5 px-4 mb-1">
+              <label className="text-md font-normal text-gray-600">
+                Your Message
+              </label>
+              <textarea
+                className="outline-none text-black h-[35px] w-full pl-2 rounded-sm shadow-sm border-b-[1px] border-gray-400"
+                {...register("message", {
+                  required: true,
+                })}
+                value={getValues("message")}
+              />
+              {errors.message && (
+                <p className="text-red-600">Please enter your message</p>
+              )}
+            </div>
+            <button
+              className="block w-[100%] mt-10 rounded-md bg-secondaryColor px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-orange-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+              type="submit"
+            >
+              Lets's Talk
+            </button>
+          </form>
         </div>
       </div>
       <CommonModal isVisible={isModalOpen} onClose={onClose} modalTitle="">
         <div
-        className="w-full min-w-full xl:overflow-hidden
+          className="w-full min-w-full xl:overflow-hidden
         lg:overflow-y-scroll md:overflow-y-scroll
          overflow-y-scroll bg-white flex flex-row 
        justify-center items-center rounded-b-lg pt-4
        mt-4
        "
         >
-          <h1 className="text-xl text-green-600 mb-5">
-          Congratulations !! <br/>
-          Your Query has been successfully submitted
+          <h1 className="text-xl text-green-600 mb-5 ml-10">
+            Congratulations !! <br />
+            Your Query has been successfully submitted
           </h1>
         </div>
       </CommonModal>

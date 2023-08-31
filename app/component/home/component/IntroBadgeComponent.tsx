@@ -72,9 +72,9 @@ const IntroBadgeContainer = () => {
                 2xl:grid-cols-2
                 p-3
                 w-full  
-                gap-3 
+                gap-3
                 xl:gap-6
-                lg:gap-6
+                lg:gap-6 
 
         "
               >
