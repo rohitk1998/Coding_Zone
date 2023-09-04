@@ -19,11 +19,13 @@ const InfoBadge = () => {
         icon={faLocationDot}
         heading="Coding Zone Solutions"
         description="Phase 8B sector 74 Mohali"
+        clickable={false}
       />
       <CommonBadge
         icon={faEnvelope}
         heading="Mail Us On"
         description="contact@codingzonesolutions.in"
+        clickable={true}
       />
     </div>
   );

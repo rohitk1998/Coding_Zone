@@ -3,7 +3,7 @@
 import styles from "@/style";
 import Container from "../Container";
 import Logo from "../navbar/Logo";
-import { FOOTER_ICONS, FOOTER_LINKS } from "@/app/constants/constants";
+import { FOOTER_ICONS, FOOTER_LINKS } from "@/app/common/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { faLocationPin,faEnvelope,faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -37,7 +37,7 @@ const AppFooter = () => {
                   <Image
                     alt="location Pin"
                     src={LocationPin}
-                    className="w-[20px] h-[20px] shadow-lg"
+                    className="w-[20px] h-[20px] shadow-sm mt-1"
                   />
                   <p
                     className={`max-w-[100%] text-md font-normal text-gray-400 ml-2`}

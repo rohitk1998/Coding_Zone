@@ -1,6 +1,6 @@
 "use client";
 import IntroHeading from "./introHeading";
-import { WORK_OVERVIEW } from "@/app/constants/constants";
+import { WORK_OVERVIEW } from "@/app/common/constants";
 import RoundedCard from "./roundedcard";
 
 const IntroBadgeContainer = () => {
@@ -50,7 +50,7 @@ const IntroBadgeContainer = () => {
                 {WORK_OVERVIEW.map((item, idx) => {
                   return (
                     <RoundedCard
-                      key={idx}
+                      key={item.id}
                       index={idx}
                       icon={item.icon}
                       mainHeading={item.mainHeading}

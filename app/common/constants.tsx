@@ -5,7 +5,7 @@ import UxIcon from "../../public/images/ui_uxicon.png";
 import liam from "../../public/images/liam.jpg";
 import john from "../../public/images/john.jpg";
 import denial from "../../public/images/denial.jpg";
-import WeHandleYourPets from "../../public/images/wehandleyourpetsImg.png"
+import WeHandleYourPets from "../../public/images/wehandleyourpets.jpeg"
 import DiscoverAddisAbaba from "../../public/images/discoveraddisababa.png"
 import SiraApp from "../../public/images/siraapp.png"
 
@@ -18,10 +18,10 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const MENU_ITEMS = [
-  { menuItem: "Home", path: "/" },
-  { menuItem: "About", path: "/about" },
-  { menuItem: "Services", path: "/services" },
-  { menuItem: "Contact Us", path: "/contactus" },
+  { id:0 , menuItem: "Home", path: "/" },
+  { id:1 , menuItem: "About", path: "/about" },
+  { id:2 , menuItem: "Services", path: "/services" },
+  { id:3 , menuItem: "Contact Us", path: "/contactus" },
 ];
 
 const COMPANY_INFORMATION = [
@@ -45,22 +45,26 @@ const COMPANY_INFORMATION = [
 
 const WORK_OVERVIEW = [
   {
+    id : 0 , 
     mainHeading: "Android Development",
     description:
       "We create mobile app using Android Studio and Flutter.",
     icon: AndroidIcon,
   },
   {
+    id : 1 ,
     mainHeading: "Web Development",
     description: "We have build sevral Apps, using Reactjs and Nextjs.",
     icon: WebIcon,
   },
   {
+    id : 2 , 
     mainHeading: "iOS Development",
     description: "We create mobile applications using Native Stacks, Xcode.",
     icon: IphoneIcon,
   },
   {
+    id : 3 ,
     mainHeading: "UI/UX Design",
     description: "We have provided best pixel prefect designs.",
     icon: UxIcon,
@@ -80,8 +84,16 @@ const FOOTER_LINKS = [
       {
         name: "Pricing",
       },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
       {
         name: "Contact",
+      },
+      {
+        name: "About",
       },
     ],
   },
@@ -98,21 +110,7 @@ const FOOTER_LINKS = [
         name: "Web Development",
       },
       {
-        name: "Marketing",
-      },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      {
-        name: "Contact",
-      },
-      {
-        name: "About",
-      },
-      {
-        name: "Gallery",
+        name: "UI/UX Design",
       },
     ],
   },
@@ -148,7 +146,7 @@ const TESTIMONIAL_SLIDES = [
     id: 1,
     clientName: "Chadi Msakni",
     clientImage: john,
-    ratingCount: 4,
+    ratingCount: 5,
     messageTitle:
       "Highly recommended kashish and his team created for me my first website and app (iOS & Android).",
     clientMessage: `Highly recommended kashish and his team created for me my first website and app (iOS & Android)including booking system and payment method in both websites and app , thank you guys was not easy specially I do
@@ -201,6 +199,27 @@ const PRODUCED_APPS = [
   }
 ]
 
+const REGEX_PATTERN = {
+  stringWithSpecifiedLength : /^[A-Za-z]{3,30}$/,
+  numberRegex : /^[0-9]*$/,
+  minPhoneLength : 10,
+  maxPhoneLength : 10,
+  email: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i,
+  emailOptional : /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+}
+
+const VALIDATION_MESSAGE = {
+  contactForm : {
+    nameRequired : "Please enter your name" , 
+    emailRequired : "Please enter an email" , 
+    messageRequired : "Please enter a message" , 
+    phoneNumberRequired : "Please enter your phone number" , 
+    isEmailValid : "Please enter a valid email", 
+    isNameValidLength : "Please enter letters between 3 and 30",
+    isPhoneNumberValid : "Phone number length should be 10."
+  }
+}
+
 export {
   MENU_ITEMS,
   COMPANY_INFORMATION,
@@ -208,5 +227,7 @@ export {
   FOOTER_LINKS,
   FOOTER_ICONS,
   TESTIMONIAL_SLIDES,
-  PRODUCED_APPS
+  PRODUCED_APPS,
+  REGEX_PATTERN,
+  VALIDATION_MESSAGE
 };

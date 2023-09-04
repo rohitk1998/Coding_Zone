@@ -6,7 +6,7 @@ import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import ReactStars from "react-stars";
-import { TESTIMONIAL_SLIDES } from "../../../constants/constants";
+import { TESTIMONIAL_SLIDES } from "../../../common/constants";
 import RevealRight from "../../revealRight";
 import Reveal from "../../reveal";
 import { CommonModal } from "../..";
@@ -91,7 +91,7 @@ const Testimonial = () => {
                 </Reveal>
               </div>
             </div>
-            <div className="group w-full xl:w-[60%] flex flex-col items-center justify-end py-5 relative mt-6">
+            <div className="group w-full xl:w-[80%] flex flex-col items-center justify-end py-5 relative mt-6">
               <div
                 className={`flex flex-col items-center
          justify-center rounded-[20px]
@@ -118,12 +118,12 @@ const Testimonial = () => {
                                 height={40}
                                 className="w-[50px] h-[50px] shadow-lg rounded-full object-cover"
                               /> */}
-                              <h6 className="mb-1 text-md font-bold text-black md:text-xl lg:text-xl">
+                              <h6 className="mb-0 text-md font-bold text-black md:text-xl lg:text-xl">
                                 {slide.clientName}
                               </h6>
                             </div>
                             <div className="w-full flex flex-row items-center justify-start mt-3">
-                              <p className="mb-1 text-sm font-normal text-gray-500 md:text-lg lg:text-lg">
+                              <p className="mb-0 text-sm font-normal text-gray-500 md:text-sm lg:text-lg">
                                 {slide.messageTitle}
                                 <button className="bg-secondaryColor rounded-md text-white px-2 ml-1 shadow-md"
                                 onClick={()=> onOpen(slide)}

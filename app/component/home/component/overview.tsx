@@ -1,5 +1,5 @@
 "use client";
-import { COMPANY_INFORMATION } from "@/app/constants/constants";
+import { COMPANY_INFORMATION } from "@/app/common/constants";
 import InfoBadge from "./infoBadge";
 import OverviewHeading from "./overviewHeading";
 import Reveal from "../../reveal";
