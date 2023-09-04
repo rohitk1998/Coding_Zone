@@ -10,15 +10,31 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import CommonBadge from "./commonBadge";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+
   const handleOpenMenu = () => {
     setOpenMenu(!openMenu);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+      console.log(window.scrollY);
+    };
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="fixed w-full bg-transparent z-10 bg-white lg:border-none border-b-[1px] lg:shadow-sm shadow-sm">
+    <div className={`fixed w-full z-10 lg:border-none border-b-[1px] lg:shadow-sm shadow-sm ${scrollY > 50 || openMenu ? "bg-white" : "bg-transparent z-10 opacity-[0.8]"}`}>
       <div className="py-1">
         <Container>
           <div className="flex flex-row items-center justify-between ">
@@ -34,6 +50,7 @@ const Navbar = () => {
               icon={faPaperPlane}
               heading="Get A Quote"
               description=""
+              clickable={false}
             />
           </div>
           {openMenu && (
@@ -43,16 +60,19 @@ const Navbar = () => {
                 icon={faPaperPlane}
                 heading="Get A Quote"
                 description=""
+                clickable={false}
               />
               <CommonBadge
                 icon={faLocationDot}
                 heading="Coding Zone Solutions"
                 description="Phase 8B sector 74 Mohali"
+                clickable={false}
               />
               <CommonBadge
                 icon={faEnvelope}
                 heading="Mail Us On"
                 description="contact@codingzonesolutions.in"
+                clickable={true}
               />
             </div>
           )}

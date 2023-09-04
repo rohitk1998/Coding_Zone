@@ -1,6 +1,6 @@
 "use client";
 import ProductCard from "./productCard";
-import { PRODUCED_APPS } from "@/app/constants/constants";
+import { PRODUCED_APPS } from "@/app/common/constants";
 
 const ProductSection = () => {
   return (

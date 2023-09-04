@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
-import { MENU_ITEMS } from "../../constants/constants";
+import { MENU_ITEMS } from "../../common/constants";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const Divider = () => {
   return (
@@ -34,7 +35,7 @@ const Menu: React.FC<any> = ({ isOpen }) => {
         >
           {MENU_ITEMS.map((menu, index) => (
             <div
-             key={index}
+             key={menu.id}
               className="
         flex
         flex-row
@@ -44,15 +45,16 @@ const Menu: React.FC<any> = ({ isOpen }) => {
         p-5
         "
             >
-              <h3
-                className={`text-lg font-large gap-10 hover:text-primaryColor ${
+              <Link
+                className={`cursor-pointer text-lg font-large gap-10 hover:text-primaryColor ${
                   pathname == menu.path
                     ? "text-primaryColor"
                     : "text-secondaryColor"
                 }`}
+                href={menu.path}
               >
                 {menu.menuItem}
-              </h3>
+              </Link>
               {index < MENU_ITEMS.length - 1 && <Divider />}
             </div>
           ))}

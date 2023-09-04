@@ -12,14 +12,15 @@ const ClientReviewModal : React.FC<ClientReviewModalProps> = ({ reviewObj })=> {
     console.log("review obj" , reviewObj);
     
           return(
-            <div className="w-full min-w-full xl:overflow-hidden
+            <div className="w-full min-w-full xl:overflow-y-scroll
              lg:overflow-y-scroll md:overflow-y-scroll
               overflow-y-scroll bg-white flex flex-row 
             justify-center items-center rounded-b-lg pt-4
+            
             ">
               <div className="w-[90%] pl-2 flex-row items-center justify-center
-              xl:h-auto lg:h-auto md:h-[250px] sm:h-auto h-[250px]
               pt-4
+              xl:h-[250px] lg:h-[250px] md:h-[250px] sm:h-auto h-[250px]
               ">
                 <div className="flex flex-row items-start justify-start px-7">
                   <h1 className="text-2xl font-bold text-gray-500">{reviewObj.clientName}</h1>

@@ -10,12 +10,12 @@ interface Props {
 
 const ProductCard: React.FC<Props> = ({ product }) => {
   return (
-    <div className="group border-[1px] relative lg:w-[100%] md:w-[100%] w-[100%] bg-white overflow-hidden rounded-2xl hover:rounded-2xl hover:-translate-y-1 hover:scale-110 hover:bg-primaryColor duration-200 hover:text-white text-black"
+    <div className="group relative lg:w-[100%] md:w-[100%] w-[100%] rounded-2xl hover:rounded-2xl hover:-translate-y-1 hover:scale-110 hover:bg-primaryColor duration-200 hover:text-white text-black overflow-hidden"
     >
       <Image
         src={product.image}
         alt={product.name}
-        className="w-full h-40 object-cover mb-4"
+        className="w-full h-40 object-cover mb-4 border-[1px]"
       />
       <div className="p-5 w-full">
         <Reveal className="">

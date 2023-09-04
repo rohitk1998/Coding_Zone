@@ -28,7 +28,6 @@ const RoundedCard: React.FC<RoundedCardProps> = ({
         justify-center 
         border-[1px] 
         rounded-[20px]
-        shadow-lg 
         transition
         ease-in-out 
         delay-50

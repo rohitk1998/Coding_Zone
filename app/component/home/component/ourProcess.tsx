@@ -7,6 +7,9 @@ import Reveal from "../../reveal";
 import { useState } from "react";
 import { CommonModal } from "../..";
 import { useForm } from "react-hook-form";
+import { REGEX_PATTERN } from "@/app/common/constants";
+import { contactFormValidation } from "@/app/common/validation";
+import { yupResolver } from '@hookform/resolvers/yup';
 
 const OurProcess = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,17 +29,12 @@ const OurProcess = () => {
     getValues,
     reset
   } = useForm({
-    defaultValues : {
-      name : "" , 
-      email  : "" , 
-      phone : "" , 
-      message : ""
-    }
+    resolver : yupResolver(contactFormValidation)
   });
 
   return (
     <Container>
-      <div className="w-[75%] mx-auto flex flex-col items-center xl:justify-center lg:justify-cetner justify-center rounded-[20px]">
+      <div className="w-[75%] mx-auto flex flex-col items-center xl:justify-center lg:justify-cetner justify-center">
         <Reveal className="">
           <h1 className="mb-4 text-4xl font-bold text-black md:text-4xl lg:text-6xl ml-2 text-center">
             Lets talk about your project
@@ -52,6 +50,7 @@ const OurProcess = () => {
         <div className="grid lg:grid-cols-2 grid-cols-1 xl:grid-cols-2 p-4 bg-white md:grid-cols-2">
           <IntroCoverImage image={ContactImage} />
           <form
+
             className="xl:w-[70%] lg:w-[70%] md:w-[70%] sm:w-[100%] w-[100%] flex flex-col 
             xl:justify-center xl:items-start
             lg:justify-center lg:items-start
@@ -61,11 +60,14 @@ const OurProcess = () => {
             
             "
             onSubmit={handleSubmit((data) => {
+              console.log("data",data);
+              
               handleQuery();
+
               reset({
                 name : "" , 
-                email  : "" , 
-                phone : "" , 
+                email : "" , 
+                phoneNumber : "" , 
                 message : ""
               })
             })}
@@ -73,44 +75,35 @@ const OurProcess = () => {
             <div className="w-[100%] flex flex-col items-start justify-start pt-5 px-4 mb-1">
               <label className="text-md font-normal text-gray-600">Name</label>
               <input
-                className="outline-none text-black h-[35px] w-full pl-2 rounded-sm shadow-sm border-b-[1px] border-gray-400"
-                {...register("name", {
-                  required: true,
-                })}
-                value={getValues("name")}
+              className="outline-none text-black h-[35px] w-full pl-2 rounded-sm shadow-sm border-b-[1px] border-gray-400"
+                type="text"
+                id="name"
+                placeholder="Enter name"
+                {...register("name")}
               />
-              {errors.name && (
-                <p className="text-red-600">Please enter your name</p>
-              )}
+                <p className="text-red-400">{errors.name?.message}</p>
             </div>
             <div className="w-[100%] flex flex-col items-start justify-start pt-5 px-4 mb-1">
               <label className="text-md font-normal text-gray-600">Email</label>
               <input
-                className="outline-none text-black h-[35px] w-full pl-2 rounded-sm shadow-sm border-b-[1px] border-gray-400"
-                {...register("email", {
-                  required: true,
-                  maxLength: 10,
-                })}
-                value={getValues("email")}
+              className="outline-none text-black h-[35px] w-full pl-2 rounded-sm shadow-sm border-b-[1px] border-gray-400"
+                type="text"
+                id="email"
+                placeholder="Enter email"
+                {...register("email")}
               />
-              {errors.email && (
-                <p className="text-red-600">Please enter your email</p>
-              )}
+             <p className="text-red-400">{errors.email?.message}</p>
             </div>
             <div className="w-[100%] flex flex-col items-start justify-start pt-5 px-4 mb-1">
               <label className="text-md font-normal text-gray-600">
                 Phone Number
               </label>
               <input
+              placeholder="Enter phone number"
                 className="outline-none text-black h-[35px] w-full pl-2 rounded-sm shadow-sm border-b-[1px] border-gray-400"
-                {...register("phone", {
-                  required: true,
-                })}
-                value={getValues("phone")}
+                {...register("phoneNumber")}
               />
-              {errors.phone && (
-                <p className="text-red-600">Please enter your phone number</p>
-              )}
+             <p className="text-red-400">{errors.phoneNumber?.message}</p>
             </div>
 
             <div className="w-[100%] flex flex-col items-start justify-start pt-5 px-4 mb-1">
@@ -118,15 +111,11 @@ const OurProcess = () => {
                 Your Message
               </label>
               <textarea
+              placeholder="Enter your message"
                 className="outline-none text-black h-[35px] w-full pl-2 rounded-sm shadow-sm border-b-[1px] border-gray-400"
-                {...register("message", {
-                  required: true,
-                })}
-                value={getValues("message")}
+                {...register("message")}
               />
-              {errors.message && (
-                <p className="text-red-600">Please enter your message</p>
-              )}
+             <p className="text-red-400">{errors.message?.message}</p>
             </div>
             <button
               className="block w-[100%] mt-10 rounded-md bg-secondaryColor px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-orange-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
@@ -142,13 +131,15 @@ const OurProcess = () => {
           className="w-full min-w-full xl:overflow-hidden
         lg:overflow-y-scroll md:overflow-y-scroll
          overflow-y-scroll bg-white flex flex-row 
-       justify-center items-center rounded-b-lg pt-4
+       justify-center items-center rounded-lg pt-4
        mt-4
        "
         >
-          <h1 className="text-xl text-green-600 mb-5 ml-10">
-            Congratulations !! <br />
-            Your Query has been successfully submitted
+          <h1 className="text-lg text-green-600 mb-5 ml-10">
+            Congratulations !<br />
+            Your query has been successfully emailed to us
+            <br/>
+            Thanks.
           </h1>
         </div>
       </CommonModal>
