@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { Nunito , Montserrat } from "next/font/google";
 import {
   BackgroundAnimation,
   ScrollUpButton,
@@ -8,7 +8,7 @@ import {
   AppFooter,
 } from "./component";
 
-const font = Nunito({ subsets: ["latin"] });
+const font = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Coding Zone",

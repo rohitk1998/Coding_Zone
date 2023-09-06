@@ -34,7 +34,7 @@ const OurProcess = () => {
 
   return (
     <Container>
-      <div className="w-[75%] mx-auto flex flex-col items-center xl:justify-center lg:justify-cetner justify-center">
+      <div className="w-[75%] mx-auto flex flex-col items-center xl:justify-center lg:justify-cetner justify-center pt-[80px]">
         <Reveal className="">
           <h1 className="mb-4 text-4xl font-bold text-black md:text-4xl lg:text-6xl ml-2 text-center">
             Lets talk about your project
@@ -73,9 +73,9 @@ const OurProcess = () => {
             })}
           >
             <div className="w-[100%] flex flex-col items-start justify-start pt-5 px-4 mb-1">
-              <label className="text-md font-normal text-gray-600">Name</label>
+              <label className="lg:text-md md:text-md text-sm font-normal text-gray-500">Name</label>
               <input
-              className="outline-none text-black h-[35px] w-full pl-2 rounded-sm shadow-sm border-b-[1px] border-gray-400"
+              className="outline-none lg:text-md md:text-md text-sm text-black h-[35px] w-full pl-2 rounded-sm shadow-sm border-b-[1px] border-gray-400"
                 type="text"
                 id="name"
                 placeholder="Enter name"
@@ -84,9 +84,9 @@ const OurProcess = () => {
                 <p className="text-red-400">{errors.name?.message}</p>
             </div>
             <div className="w-[100%] flex flex-col items-start justify-start pt-5 px-4 mb-1">
-              <label className="text-md font-normal text-gray-600">Email</label>
+              <label className="lg:text-md md:text-md text-sm font-normal text-gray-500">Email</label>
               <input
-              className="outline-none text-black h-[35px] w-full pl-2 rounded-sm shadow-sm border-b-[1px] border-gray-400"
+              className="outline-none lg:text-md md:text-md text-sm text-black h-[35px] w-full pl-2 rounded-sm shadow-sm border-b-[1px] border-gray-400"
                 type="text"
                 id="email"
                 placeholder="Enter email"
@@ -95,24 +95,24 @@ const OurProcess = () => {
              <p className="text-red-400">{errors.email?.message}</p>
             </div>
             <div className="w-[100%] flex flex-col items-start justify-start pt-5 px-4 mb-1">
-              <label className="text-md font-normal text-gray-600">
+              <label className="lg:text-md md:text-md text-sm font-normal text-gray-500">
                 Phone Number
               </label>
               <input
               placeholder="Enter phone number"
-                className="outline-none text-black h-[35px] w-full pl-2 rounded-sm shadow-sm border-b-[1px] border-gray-400"
+                className="outline-none lg:text-md md:text-md text-sm text-black h-[35px] w-full pl-2 rounded-sm shadow-sm border-b-[1px] border-gray-400"
                 {...register("phoneNumber")}
               />
              <p className="text-red-400">{errors.phoneNumber?.message}</p>
             </div>
 
             <div className="w-[100%] flex flex-col items-start justify-start pt-5 px-4 mb-1">
-              <label className="text-md font-normal text-gray-600">
+              <label className="lg:text-md md:text-md text-sm font-normal text-gray-500">
                 Your Message
               </label>
               <textarea
               placeholder="Enter your message"
-                className="outline-none text-black h-[35px] w-full pl-2 rounded-sm shadow-sm border-b-[1px] border-gray-400"
+                className="outline-none lg:text-md md:text-md text-sm text-black h-[35px] w-full pl-2 rounded-sm shadow-sm border-b-[1px] border-gray-400"
                 {...register("message")}
               />
              <p className="text-red-400">{errors.message?.message}</p>

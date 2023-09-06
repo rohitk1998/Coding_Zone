@@ -26,19 +26,23 @@ const MENU_ITEMS = [
 
 const COMPANY_INFORMATION = [
   {
-    totalYr: "1+",
-    description: "Years In Buisness",
+    totalYr: 6,
+    valueIn:"+",
+    description: "Months In Buisness",
   },
   {
-    totalYr: "20+",
+    totalYr: 20,
+    valueIn:"+",
     description: "Solutions Delivered",
   },
   {
-    totalYr: "90%",
+    totalYr: 90,
+    valueIn:"%",
     description: "Client Retention",
   },
   {
-    totalYr: "10+",
+    totalYr: 15,
+    valueIn:"+",
     description: "Enthusiest Team Members",
   },
 ];
@@ -73,44 +77,65 @@ const WORK_OVERVIEW = [
 
 const FOOTER_LINKS = [
   {
+    id : 0,
     title: "Support",
     links: [
       {
+        id : 0,
         name: "Documentation",
+        link:""
       },
       {
+        id : 1,
         name: "Guidence",
+        link:""
       },
       {
+        id : 2,
         name: "Pricing",
+        link:""
       },
     ],
   },
   {
+    id : 1,
     title: "Company",
     links: [
       {
+        id : 0,
         name: "Contact",
+        link:"/contactus"
       },
       {
+        id : 1,
         name: "About",
+        link: "/about"
       },
     ],
   },
   {
+    id : 2,
     title: "Services",
     links: [
       {
+        id : 0,
         name: "Android Development",
+        link:""
       },
       {
+        id : 1,
         name: "iOS Development",
+        link:""
       },
       {
+        id : 2,
         name: "Web Development",
+        link:""
       },
       {
+        id : 3,
         name: "UI/UX Design",
+        link:""
       },
     ],
   },
@@ -118,15 +143,19 @@ const FOOTER_LINKS = [
 
 const FOOTER_ICONS = [
   {
+    id : 0,
     icon: faTwitter,
   },
   {
+    id : 1,
     icon: faInstagram,
   },
   {
+    id : 2,
     icon: faLinkedin,
   },
   {
+    id : 3,
     icon: faFacebook,
   },
 ];

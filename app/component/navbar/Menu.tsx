@@ -20,7 +20,9 @@ const Divider = () => {
   );
 };
 
-const Menu: React.FC<any> = ({ isOpen }) => {
+const Menu: React.FC<any> = ({ isOpen  , scrollY }) => {
+  console.log("scrollY",scrollY);
+  
   const pathname = usePathname();
   return (
     <>
@@ -46,7 +48,7 @@ const Menu: React.FC<any> = ({ isOpen }) => {
         "
             >
               <Link
-                className={`cursor-pointer text-lg font-large gap-10 hover:text-primaryColor ${
+                className={`cursor-pointer text-md font-normal gap-10 hover:text-primaryColor ${
                   pathname == menu.path
                     ? "text-primaryColor"
                     : "text-secondaryColor"
@@ -55,7 +57,7 @@ const Menu: React.FC<any> = ({ isOpen }) => {
               >
                 {menu.menuItem}
               </Link>
-              {index < MENU_ITEMS.length - 1 && <Divider />}
+              {index < MENU_ITEMS.length - 1 && scrollY < 30   ? <Divider /> : null }
             </div>
           ))}
         </div>
@@ -84,15 +86,16 @@ const Menu: React.FC<any> = ({ isOpen }) => {
         justify-between
         "
             >
-              <h3
-                className={`text-lg font-large gap-5 hover:text-primaryColor ${
+              <Link
+                className={`cursor-pointer text-lg font-large gap-10 hover:text-primaryColor ${
                   pathname == menu.path
                     ? "text-primaryColor"
                     : "text-secondaryColor"
                 }`}
+                href={menu.path}
               >
                 {menu.menuItem}
-              </h3>
+              </Link>
             </div>
           ))}
         </div>

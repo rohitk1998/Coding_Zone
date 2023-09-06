@@ -118,14 +118,14 @@ const Testimonial = () => {
                                 height={40}
                                 className="w-[50px] h-[50px] shadow-lg rounded-full object-cover"
                               /> */}
-                              <h6 className="mb-0 text-md font-bold text-black md:text-xl lg:text-xl">
+                              <h6 className="mb-0 text-md font-semibold text-black md:text-lg lg:text-lg">
                                 {slide.clientName}
                               </h6>
                             </div>
                             <div className="w-full flex flex-row items-center justify-start mt-3">
-                              <p className="mb-0 text-sm font-normal text-gray-500 md:text-sm lg:text-lg">
+                              <p className="mb-0 lg:text-md md:text-md text-sm font-normal text-gray-400 ">
                                 {slide.messageTitle}
-                                <button className="bg-secondaryColor rounded-md text-white px-2 ml-1 shadow-md"
+                                <button className="bg-secondaryColor rounded-md text-white px-2 ml-1 shadow-md text-[12px] mb-1"
                                 onClick={()=> onOpen(slide)}
                                 >
                                   more
@@ -163,7 +163,7 @@ const Testimonial = () => {
               <div className="flex top-4 justify-center py-2">
                 {TESTIMONIAL_SLIDES.map((slide, slideIndex) => (
                   <div
-                    key={slideIndex}
+                    key={slide.id}
                     onClick={() => goToSlide(slideIndex)}
                     className="text-2xl cursor-pointer"
                   >

@@ -58,12 +58,12 @@ const RoundedCard: React.FC<RoundedCardProps> = ({
             alt="android icon"
             className="w-[60px] h-[60px] xl:ml-0 ml-1 mb-1"
           />
-          <h6 className="w-[70%] text-lg font-extrabold text-black group-hover:text-white md:text-md lg:text-lg ml-6">
+          <h6 className="w-[70%] text-lg font-semibold text-black group-hover:text-white md:text-md lg:text-lg ml-6">
             {mainHeading}
           </h6>
         </div>
         <div className="mt-3 w-full items-start justify-start flex flex-row">
-          <p className="mb-1 text-md font-semiBold text-gray-500 group-hover:text-white md:text-md lg:text-md ml-2">
+          <p className="mb-1 lg:text-md md:text-md text-sm font-normal text-gray-400 group-hover:text-white md:text-md lg:text-md ml-2">
             {paragraph}
           </p>
         </div>
