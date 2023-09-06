@@ -10,7 +10,8 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import CommonBadge from "./commonBadge";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
+import SecondMenuBar from "./secondMenu";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -34,25 +35,24 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className={`fixed w-full z-10 lg:border-none border-b-[1px] lg:shadow-sm shadow-sm ${scrollY > 50 || openMenu ? "bg-white" : "bg-transparent z-10 opacity-[0.8]"}`}>
+    <div
+      className={`fixed w-full z-10 lg:border-none border-b-[1px] lg:shadow-sm shadow-sm ${
+        scrollY > 30 || openMenu
+          ? "bg-white"
+          : "bg-transparent z-10 opacity-[0.8]"
+      }`}
+    >
       <div className="py-1">
         <Container>
-          <div className="flex flex-row items-center justify-between ">
+          <div className="flex flex-row items-center justify-between">
             <Logo />
-            <InfoBadge />
+            {scrollY > 30 ? <SecondMenuBar scrollY={scrollY} /> : <InfoBadge />}
+
             <div className="lg:hidden w-full flex flex-row items-center justify-end">
               <MenuButton onBtnClick={handleOpenMenu} />
             </div>
           </div>
-          <div className="hidden w-full lg:flex flex-row items-center justify-between">
-            <Menu />
-            <CommonBadge
-              icon={faPaperPlane}
-              heading="Get A Quote"
-              description=""
-              clickable={false}
-            />
-          </div>
+          {scrollY < 30 && <SecondMenuBar scrollY={scrollY} />}
           {openMenu && (
             <div className="block lg:hidden flex-row items-center justify-between">
               <Menu isOpen={openMenu} />

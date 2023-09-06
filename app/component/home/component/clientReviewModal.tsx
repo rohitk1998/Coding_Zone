@@ -26,7 +26,7 @@ const ClientReviewModal : React.FC<ClientReviewModalProps> = ({ reviewObj })=> {
                   <h1 className="text-2xl font-bold text-gray-500">{reviewObj.clientName}</h1>
                 </div>
                 <div className="flex flex-row items-start justify-start px-7 mt-2 mb-2">
-                  <h1 className="xl:text-lg lg:text-md md:text-md text-md font-medium text-gray-400">
+                  <h1 className="xl:text-md lg:text-md md:text-md text-md font-medium text-gray-400">
                    {reviewObj.clientMessage}
                   </h1>
                 </div>

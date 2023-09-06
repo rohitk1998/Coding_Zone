@@ -21,9 +21,8 @@ const Overview = () => {
     >
       <OverviewHeading />
       <Reveal className="w-full">
-
-      <div
-        className="
+        <div
+          className="
            grid 
            grid-cols-4
            sm:grid-cols-4 
@@ -32,21 +31,19 @@ const Overview = () => {
            xl:grid-cols-4
            2xl:grid-cols-4
            "
-      >
-
-        {COMPANY_INFORMATION.map((item, index) => {
-          return (
-             <InfoBadge
-              item1={item.totalYr}
-              item2={item.description}
-              key={index}
-            />
-           
-          )
-        })}
-      </div>
+        >
+          {COMPANY_INFORMATION.map((item, index) => {
+            return (
+              <InfoBadge
+                valueIn={item.valueIn}
+                item1={item.totalYr}
+                item2={item.description}
+                key={index}
+              />
+            );
+          })}
+        </div>
       </Reveal>
-
     </div>
   );
 };

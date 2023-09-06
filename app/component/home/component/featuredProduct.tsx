@@ -6,8 +6,8 @@ const FeaturedProduct = () => {
   return (
     <div
       className="w-full
-       lg:mt-[30px]
-       md:mt-[30px]
+       lg:mt-[70px]
+       md:mt-[70px]
        sm:mt-[60px]
        mt-[30px]
        px-4

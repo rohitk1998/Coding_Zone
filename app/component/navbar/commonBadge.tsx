@@ -42,7 +42,7 @@ const CommonBadge : React.FC<CommonBadgeProps> = ({ icon , heading, description 
           className="
         inline-block"
         >
-          <h3 className="text-lg font-medium color text-secondaryColor">
+          <h3 className="text-md font-normal color text-secondaryColor">
             {heading}
           </h3>
           <h4 
