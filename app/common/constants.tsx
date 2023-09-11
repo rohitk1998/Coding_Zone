@@ -2,9 +2,6 @@ import AndroidIcon from "../../public/images/androidicon.png";
 import IphoneIcon from "../../public/images/iphoneicon.png";
 import WebIcon from "../../public/images/webicon.png";
 import UxIcon from "../../public/images/ui_uxicon.png";
-import liam from "../../public/images/liam.jpg";
-import john from "../../public/images/john.jpg";
-import denial from "../../public/images/denial.jpg";
 import WeHandleYourPets from "../../public/images/wehandleyourpets.jpeg"
 import DiscoverAddisAbaba from "../../public/images/discoveraddisababa.png"
 import SiraApp from "../../public/images/siraapp.png"
@@ -89,12 +86,7 @@ const FOOTER_LINKS = [
         id : 1,
         name: "Guidence",
         link:""
-      },
-      {
-        id : 2,
-        name: "Pricing",
-        link:""
-      },
+      }
     ],
   },
   {
@@ -145,18 +137,22 @@ const FOOTER_ICONS = [
   {
     id : 0,
     icon: faTwitter,
+    link:""
   },
   {
     id : 1,
     icon: faInstagram,
+    link:"https://www.instagram.com/codingzone_solutions/"
   },
   {
     id : 2,
     icon: faLinkedin,
+    link:"https://www.linkedin.com/company/codingzone-solutions/"
   },
   {
     id : 3,
     icon: faFacebook,
+    link:"https://www.facebook.com/profile.php?id=100095136272840&mibextid=D4KYlr",
   },
 ];
 
@@ -164,7 +160,7 @@ const TESTIMONIAL_SLIDES = [
   {
     id: 0,
     clientName: "Robert",
-    clientImage: denial,
+    clientImage: null,
     ratingCount: 5,
     messageTitle:
       "It was an absolute pleasure working with Kashish. He did the job well and was able to communicate issues and roadblocks effectively.",
@@ -174,7 +170,7 @@ const TESTIMONIAL_SLIDES = [
   {
     id: 1,
     clientName: "Chadi Msakni",
-    clientImage: john,
+    clientImage: null,
     ratingCount: 5,
     messageTitle:
       "Highly recommended kashish and his team created for me my first website and app (iOS & Android).",
@@ -194,8 +190,8 @@ const TESTIMONIAL_SLIDES = [
   {
     id: 3,
     clientName: "Bikram sekhon ",
-    clientImage: liam,
-    ratingCount: 4,
+    clientImage: null,
+    ratingCount: 5,
     messageTitle:
       "He did a very good job within timeline. Hired him permanently for all our web development work.",
     clientMessage:
@@ -249,6 +245,8 @@ const VALIDATION_MESSAGE = {
   }
 }
 
+const GOOGLE_MAP_URL = "https://www.google.com/maps/dir/29.2904069,76.0389249/codingzone+solutions+mohali/@29.9994972,75.7282011,9z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x390fefbecb8683b3:0xbd1cb376301ee83b!2m2!1d76.6932842!2d30.7116723?entry=ttu"
+
 export {
   MENU_ITEMS,
   COMPANY_INFORMATION,
@@ -258,5 +256,6 @@ export {
   TESTIMONIAL_SLIDES,
   PRODUCED_APPS,
   REGEX_PATTERN,
-  VALIDATION_MESSAGE
+  VALIDATION_MESSAGE,
+  GOOGLE_MAP_URL
 };

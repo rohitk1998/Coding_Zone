@@ -1,7 +1,8 @@
 "use client";
 
-import { faLocationDot,faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import CommonBadge from "./commonBadge";
+import { GOOGLE_MAP_URL } from "@/app/common/constants";
 
 const InfoBadge = () => {
   return (
@@ -19,9 +20,11 @@ const InfoBadge = () => {
         icon={faLocationDot}
         heading="Coding Zone Solutions"
         description="Phase 8B sector 74 Mohali"
-        clickable={false}
+        clickable={true}
+        url={GOOGLE_MAP_URL}
       />
       <CommonBadge
+        url="https://mail.google.com/mail/u/0/#inbox?compose=new"
         icon={faEnvelope}
         heading="Mail Us On"
         description="contact@codingzonesolutions.in"

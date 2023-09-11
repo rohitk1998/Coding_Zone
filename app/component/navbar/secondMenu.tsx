@@ -16,6 +16,7 @@ const SecondMenuBar : React.FC<SecondMenuBarProps>  = ({ scrollY })=> {
         <div className={`hidden ${scrollY > 30 ? "w-[70%]" : "w-full"} lg:flex flex-row items-center justify-between`}>
               <Menu scrollY={scrollY} />
               <CommonBadge
+                url=""
                 icon={faPaperPlane}
                 heading="Get A Quote"
                 description=""

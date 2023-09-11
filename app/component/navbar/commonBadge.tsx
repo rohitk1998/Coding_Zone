@@ -6,10 +6,11 @@ interface CommonBadgeProps {
     icon : any , 
     heading : string , 
     description : string ,
-    clickable : boolean 
+    clickable : boolean  , 
+    url : string ;
 }
 
-const CommonBadge : React.FC<CommonBadgeProps> = ({ icon , heading, description , clickable }) => {
+const CommonBadge : React.FC<CommonBadgeProps> = ({ icon , heading, description , clickable , url }) => {
   return (
     <div className={`block p-2`}>
       <div
@@ -49,7 +50,7 @@ const CommonBadge : React.FC<CommonBadgeProps> = ({ icon , heading, description 
           className={`text-sm font-normal text-gray-400 ${clickable ? "cursor-pointer" : ""}`}
           onClick={()=> {
             if(clickable){
-              window.open("https://mail.google.com/mail/u/0/#inbox?compose=new")
+              window.open(url)
             }
           }}
           >{description ? description : ""}</h4>

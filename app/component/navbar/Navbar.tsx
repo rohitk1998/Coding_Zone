@@ -10,29 +10,51 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import CommonBadge from "./commonBadge";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import SecondMenuBar from "./secondMenu";
+import { GOOGLE_MAP_URL } from "@/app/common/constants";
+
+function useOutsideClick(ref  : any , callback : any ) {
+  useEffect(() => {
+    function handleClickOutside(event : any ) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        callback();
+      }
+    }
+
+    // Attach the event listener
+    document.addEventListener('mousedown', handleClickOutside);
+
+    // Cleanup: Remove the event listener when the component unmounts
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [ref, callback]);
+}
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const divRef = useRef(null);
 
   const handleOpenMenu = () => {
     setOpenMenu(!openMenu);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-      console.log(window.scrollY);
-    };
-    handleScroll();
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
 
+  useEffect(() => {
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // Use the custom hook with the dropdownRef and closeDropdown callback
+  useOutsideClick(divRef, ()=> setOpenMenu(false));
 
   return (
     <div
@@ -46,17 +68,26 @@ const Navbar = () => {
         <Container>
           <div className="flex flex-row items-center justify-between">
             <Logo />
-            {scrollY > 30 ? <SecondMenuBar scrollY={scrollY} /> : <InfoBadge />}
-
+            {(() =>
+              scrollY > 30 ? (
+                <SecondMenuBar scrollY={scrollY} />
+              ) : (
+                <InfoBadge />
+              ))()}
             <div className="lg:hidden w-full flex flex-row items-center justify-end">
               <MenuButton onBtnClick={handleOpenMenu} />
             </div>
           </div>
-          {scrollY < 30 && <SecondMenuBar scrollY={scrollY} />}
+          {(() => scrollY < 30 && <SecondMenuBar scrollY={scrollY} />)()}
           {openMenu && (
-            <div className="block lg:hidden flex-row items-center justify-between">
+            <div className="block lg:hidden flex-row items-center justify-between
+            "
+
+            ref={divRef}
+            >
               <Menu isOpen={openMenu} />
               <CommonBadge
+                url=""
                 icon={faPaperPlane}
                 heading="Get A Quote"
                 description=""
@@ -66,10 +97,12 @@ const Navbar = () => {
                 icon={faLocationDot}
                 heading="Coding Zone Solutions"
                 description="Phase 8B sector 74 Mohali"
-                clickable={false}
+                clickable={true}
+                url={GOOGLE_MAP_URL}
               />
               <CommonBadge
                 icon={faEnvelope}
+                url="https://mail.google.com/mail/u/0/#inbox?compose=new"
                 heading="Mail Us On"
                 description="contact@codingzonesolutions.in"
                 clickable={true}
