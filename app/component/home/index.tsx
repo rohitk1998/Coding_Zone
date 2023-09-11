@@ -6,7 +6,7 @@ import IntroBadgeContainer from "./component/IntroBadgeComponent";
 import FeaturedProduct from "./component/featuredProduct";
 import Coding2 from "../../../public/images/coding2.svg";
 import OurProcess from "./component/ourProcess";
-import Testimonial from "./component/testimonial";
+import Reviews from "./component/reviews";
 
 export default function Home() {
 
@@ -46,9 +46,9 @@ export default function Home() {
       {/* Our Process Start */}
       <OurProcess />
       {/* Our Process End */}
-      {/* Tetimonial Start */}
-      <Testimonial/>
-      {/* Testimonial End */}
+      {/* Reviews Start */}
+      <Reviews/>
+      {/* Reviews End */}
     </>
   );
 }

@@ -2,13 +2,14 @@
 
 import styles from "@/style";
 import Container from "../Container";
-import { FOOTER_ICONS, FOOTER_LINKS } from "@/app/common/constants";
+import {
+  FOOTER_ICONS,
+  FOOTER_LINKS,
+  GOOGLE_MAP_URL,
+} from "@/app/common/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-import {
-  faEnvelope,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import IndianFlag from "../../../public/images/india.png";
 import LocationPin from "../../../public/images/location.png";
 import { FaIconComponent } from "..";
@@ -43,7 +44,8 @@ const AppFooter = () => {
                     className="w-[20px] h-[20px] shadow-sm mt-1"
                   />
                   <p
-                    className={`max-w-[100%] lg:text-md md:text-md text-sm font-normal text-gray-400 ml-2`}
+                    onClick={() => window.open(GOOGLE_MAP_URL)}
+                    className={`cursor-pointer max-w-[100%] lg:text-md md:text-md text-sm font-normal text-gray-400 ml-2`}
                   >
                     Phase-8B Ind. Area. Mohali, Punjab, India. Pin- 160055
                   </p>
@@ -63,8 +65,10 @@ const AppFooter = () => {
                   />
                   <p
                     className={`max-w-[100%] lg:text-md md:text-md text-sm font-normal text-gray-400 ml-2 cursor-pointer`}
-                    onClick={()=> {
-                        window.open("https://mail.google.com/mail/u/0/#inbox?compose=new")
+                    onClick={() => {
+                      window.open(
+                        "https://mail.google.com/mail/u/0/#inbox?compose=new"
+                      );
                     }}
                   >
                     contact@codingzonesoutions.in
@@ -164,9 +168,9 @@ const AppFooter = () => {
             </p>
             <div className="flex flex-row md:mt-0 mt-4">
               {FOOTER_ICONS.map((icon, idx) => (
-                <div
-                  key={icon.id}
-                  className={`
+                <div key={icon.id} onClick={() => window.open(icon.link)}>
+                  <div
+                    className={`
              w-[40px] h-[40px]
              flex
              flex-row
@@ -185,14 +189,15 @@ const AppFooter = () => {
         duration-100
              ${idx !== FOOTER_ICONS.length - 1 ? "mr-6" : "mr-0"}
              `}
-                >
-                  <FontAwesomeIcon
-                    icon={icon.icon}
-                    style={{ color: "white", width: "18px", height: "18px" }}
-                    className={`
+                  >
+                    <FontAwesomeIcon
+                      icon={icon.icon}
+                      style={{ color: "white", width: "18px", height: "18px" }}
+                      className={`
               cursor-pointer
               `}
-                  />
+                    />
+                  </div>
                 </div>
               ))}
             </div>
