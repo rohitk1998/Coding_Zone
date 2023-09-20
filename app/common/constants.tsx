@@ -16,7 +16,7 @@ import {
 
 const MENU_ITEMS = [
   { id:0 , menuItem: "Home", path: "/" },
-  { id:1 , menuItem: "About", path: "/about" },
+  { id:1 , menuItem: "About", path: "/about-us" },
   { id:2 , menuItem: "Services", path: "/services" },
   { id:3 , menuItem: "Contact Us", path: "/contactus" },
 ];
