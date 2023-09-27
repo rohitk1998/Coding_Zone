@@ -34,10 +34,10 @@ function useOutsideClick(ref  : any , callback : any ) {
 }
 
 const Navbar = () => {
-  const { isOutSideClicked,
-    setIsOutSideClicked,
-    setIsMenuOpen,
-    isMenuOpen,  } = useAppContext();
+  // const { isOutSideClicked,
+  //   setIsOutSideClicked,
+  //   setIsMenuOpen,
+  //   isMenuOpen,  } = useAppContext();
   const [openMenu, setOpenMenu] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const divRef = useRef(null);
