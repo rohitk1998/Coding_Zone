@@ -3,7 +3,7 @@
 const Check = ()=> {
     return(
         <div>
-            Check
+            Check Something
         </div>
     )
 }
