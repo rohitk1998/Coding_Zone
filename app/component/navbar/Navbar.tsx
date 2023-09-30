@@ -13,6 +13,7 @@ import CommonBadge from "./commonBadge";
 import { useState, useEffect, useRef } from "react";
 import SecondMenuBar from "./secondMenu";
 import { GOOGLE_MAP_URL } from "@/app/common/constants";
+import { useAppContext } from "@/app/context/context";
 
 function useOutsideClick(ref  : any , callback : any ) {
   useEffect(() => {
@@ -33,6 +34,10 @@ function useOutsideClick(ref  : any , callback : any ) {
 }
 
 const Navbar = () => {
+  const { isOutSideClicked,
+    setIsOutSideClicked,
+    setIsMenuOpen,
+    isMenuOpen,  } = useAppContext();
   const [openMenu, setOpenMenu] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const divRef = useRef(null);

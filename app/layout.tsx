@@ -7,6 +7,7 @@ import {
   Navbar,
   AppFooter,
 } from "./component";
+import {AppContextProvider} from "./context/context";
 
 const font = Montserrat({ subsets: ["latin"] });
 
@@ -23,11 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
+        <AppContextProvider >
         <Navbar />
         {children}
         <AppFooter />
         <ScrollUpButton />
         <BackgroundAnimation />
+        </AppContextProvider>
       </body>
     </html>
   );
