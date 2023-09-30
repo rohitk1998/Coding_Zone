@@ -2,7 +2,7 @@
 
 import React, { useState, createContext, useContext } from "react";
 
-const initialState = {
+const initialState : any  = {
   isOutsideClicked: false,
   isMenuOpen: false,
 };
@@ -20,12 +20,7 @@ const AppContextProvider: React.FC<AppContextProviderProps> = ({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <appContext.Provider
-      value={{
-        isOutSideClicked,
-        setIsOutSideClicked,
-        setIsMenuOpen,
-        isMenuOpen,
-      }}
+     value={{ isOutSideClicked , isMenuOpen,setIsOutSideClicked,setIsMenuOpen}}
     >
       {children}
     </appContext.Provider>
