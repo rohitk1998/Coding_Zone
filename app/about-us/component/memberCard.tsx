@@ -43,6 +43,7 @@ const MemberCard: React.FC<MemeberCardProps> = ({
         sm:w-[100px] sm:h-[100px]
         w-[100px] h-[100px]
         rounded-full text-center"
+        loading="lazy"
       />
       </Reveal>
      <div>
