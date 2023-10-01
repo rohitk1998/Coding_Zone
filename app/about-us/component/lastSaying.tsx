@@ -5,8 +5,8 @@ const LastSaying = () => {
     <Container>
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <Reveal className="">
-            <h2 className="text-center text-1xl font-semibold leading-8 text-gray-900">
+          <Reveal className="h-[100px]">
+            <h2 className="mb-4 text-3xl font-bold text-black md:text-3xl lg:text-5xl ml-2">
               {"Trusted by the world`s most innovative teams"}
             </h2>
           </Reveal>
@@ -16,8 +16,8 @@ const LastSaying = () => {
                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
                 src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
                 alt="Transistor"
-                width={158}
-                height={48}
+                // width={158}
+                // height={48}
               />
             </Reveal>
             <Reveal className="">
@@ -25,8 +25,8 @@ const LastSaying = () => {
                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
                 src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg"
                 alt="Reform"
-                width={158}
-                height={48}
+                // width={158}
+                // height={48}
               />
             </Reveal>
             <Reveal className="">
@@ -34,8 +34,8 @@ const LastSaying = () => {
                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
                 src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg"
                 alt="Tuple"
-                width={158}
-                height={48}
+                // width={158}
+                // height={48}
               />
             </Reveal>
             <Reveal className="">
@@ -43,8 +43,8 @@ const LastSaying = () => {
                 className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
                 src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg"
                 alt="SavvyCal"
-                width={158}
-                height={48}
+                // width={158}
+                // height={48}
               />
             </Reveal>
             <Reveal className="">
@@ -52,8 +52,8 @@ const LastSaying = () => {
                 className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
                 src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg"
                 alt="Statamic"
-                width={158}
-                height={48}
+                // width={158}
+                // height={48}
               />
             </Reveal>
           </div>

@@ -63,7 +63,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`fixed w-full z-10 lg:border-none border-b-[1px] lg:shadow-sm shadow-sm ${
+      className={`fixed w-full z-10 lg:border-none lg:shadow-sm shadow-sm ${
         scrollY > 30 || openMenu
           ? "bg-white"
           : "bg-transparent z-10 opacity-[0.8]"
