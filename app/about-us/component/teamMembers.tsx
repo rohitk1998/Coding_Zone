@@ -38,7 +38,7 @@ const TeamMembers = () => {
   useEffect(()=>{ 
    if(typeof window !== "undefined"){
     if(window.innerWidth <= 767){
-      setIsLess(6)
+      setIsLess(2)
     }
    }
   },[windowSize])
@@ -69,10 +69,10 @@ const TeamMembers = () => {
           className="w-full
         grid 
         grid-cols-2 
-        sm:grid-cols-3 
+        sm:grid-cols-2 
         md:grid-cols-3 
-        lg:grid-cols-4
-        xl:grid-cols-6
+        lg:grid-cols-3
+        xl:grid-cols-3
         gap-11
         mt-[30px]
         "
@@ -105,7 +105,7 @@ const TeamMembers = () => {
         </div>
       </div>
 
-      {windowSize.width <= 767 && isLess == 6 ? (
+      {windowSize.width <= 767 && isLess == 2 ? (
         <div className="flex justify-center items-center w-[100%] mt-[35px]">
           <button
             className="font-semibold shadow-sm h-[40px] w-[200px] mt-[20px] rounded-lg bg-transparent border-[1px] group-hover:border-none group-hover:bg-secondaryColor bg-primaryColor text-gray-400 group-hover:text-white
