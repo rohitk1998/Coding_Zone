@@ -9,11 +9,11 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const TeamMembers = () => {
+  const [isLess, setIsLess] = useState(employees.length);
   const [windowSize, setWindowSize] = useState({
     width: 0,
     height: 0,
   });
-  const [isLess,setIsLess] = useState(employees.length - 1 );
 
   const updateWindowSize = () => {
     if (typeof window !== "undefined") {
@@ -25,23 +25,19 @@ const TeamMembers = () => {
   };
 
   useEffect(() => {
-    // Add event listener to listen for window resize events
     window.addEventListener("resize", updateWindowSize);
-
-    // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener("resize", updateWindowSize);
     };
   }, []);
 
-
-  useEffect(()=>{ 
-   if(typeof window !== "undefined"){
-    if(window.innerWidth <= 767){
-      setIsLess(2)
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (window.innerWidth <= 767) {
+        setIsLess(2);
+      }
     }
-   }
-  },[windowSize])
+  }, [windowSize]);
 
   return (
     <Container>
@@ -56,6 +52,7 @@ const TeamMembers = () => {
         lg:grid-row-2
         xl:grid-row-2
         2xl:grid-row-2
+        mb-[100px]
         "
       >
         <div className="w-[100%] mx-auto flex flex-col items-center xl:justify-center lg:justify-cetner justify-center rounded-[20px]">
@@ -71,8 +68,8 @@ const TeamMembers = () => {
         grid-cols-2 
         sm:grid-cols-2 
         md:grid-cols-3 
-        lg:grid-cols-3
-        xl:grid-cols-3
+        lg:grid-cols-4
+        xl:grid-cols-4
         gap-11
         mt-[30px]
         "
@@ -81,7 +78,7 @@ const TeamMembers = () => {
             ? employees.map((employee) => {
                 return (
                   <MemberCard
-                    key={employee.image}
+                    key={employee.id}
                     image={employee.image}
                     designation={employee.designation}
                     name={employee.name}
@@ -93,7 +90,7 @@ const TeamMembers = () => {
                 .map((employee) => {
                   return (
                     <MemberCard
-                      key={employee.image}
+                      key={employee.id}
                       image={employee.image}
                       designation={employee.designation}
                       name={employee.name}
@@ -106,12 +103,12 @@ const TeamMembers = () => {
       </div>
 
       {windowSize.width <= 767 && isLess == 2 ? (
-        <div className="flex justify-center items-center w-[100%] mt-[35px]">
+        <div className="flex justify-center items-center w-[100%] mb-[30px]">
           <button
-            className="font-semibold shadow-sm h-[40px] w-[200px] mt-[20px] rounded-lg bg-transparent border-[1px] group-hover:border-none group-hover:bg-secondaryColor bg-primaryColor text-gray-400 group-hover:text-white
+            className="font-semibold shadow-sm h-[40px] w-[200px] mt-[10px] rounded-lg bg-transparent border-[1px] group-hover:border-none group-hover:bg-secondaryColor bg-primaryColor text-gray-400 group-hover:text-white
             mx-auto
             "
-            onClick={()=> setIsLess(14)}
+            onClick={() => setIsLess(14)}
           >
             <Reveal className="flex flex-row items-center justify-center gap-3">
               <FontAwesomeIcon
@@ -128,7 +125,7 @@ const TeamMembers = () => {
             </Reveal>
           </button>
         </div>
-      ) : null }
+      ) : null}
     </Container>
   );
 };

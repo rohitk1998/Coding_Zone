@@ -2,15 +2,14 @@
 
 import Image from "next/image";
 import React from "react";
-import Evan from "../../../public/images/evan.jpg";
 import { Reveal } from "@/app/component";
 
 interface MemeberCardProps {
   name: string;
-  image: string;
+  image:  any ;
   designation: string;
   socialLink: string;
-  key: string;
+  key: any ;
 }
 
 const MemberCard: React.FC<MemeberCardProps> = ({
@@ -35,15 +34,17 @@ const MemberCard: React.FC<MemeberCardProps> = ({
       <Reveal className="">
       <Image
         alt=""
-        src={Evan}
+        src={image}
         className="
         xl:w-[150px] xl:h-[150px]
         lg:w-[100px] lg:h-[100px]
         md:w-[100px] md:h-[100px]
         sm:w-[100px] sm:h-[100px]
         w-[100px] h-[100px]
-        rounded-full text-center"
+        rounded-full text-center object-cover shadow-md"
         loading="lazy"
+        width={200}
+        height={200}
       />
       </Reveal>
      <div>
