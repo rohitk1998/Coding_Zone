@@ -101,7 +101,6 @@ const TeamMembers = () => {
                 .slice(0, isLess)}
         </div>
       </div>
-
       {windowSize.width <= 767 && isLess == 2 ? (
         <div className="flex justify-center items-center w-[100%] mb-[30px]">
           <button
