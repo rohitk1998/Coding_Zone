@@ -51,12 +51,12 @@ const CompanyIntro = ()=> {
         >
           <div
             className="grid grid-rows-3 p-0 mx-auto w-[100%] bg-primaryColor
-            md:max-h-[400px]
+            md:max-h-[900px]
             lg:max-h-[700px]
-            xl:max-h-[600px]
+            xl:max-h-[800px]
             sm:max-h-[600px]
-            max-h-[600px]
-            xl:h-[500px]
+            max-h-[900px]
+            xl:h-[800px]
             "
           >
             <div
@@ -77,17 +77,8 @@ const CompanyIntro = ()=> {
             "
             >
               <Reveal className="">
-                <h1 className="xl:text-md lg:text-md md:text-[16px] sm:text-sm text-sm text-white font-normal">
-                  who want to know more about your business. About Us pages are
-                  where you showcase your history, what is unique about your
-                  work, your company’s values, and who you serve. The design,
-                  written content, and visual or video elements together tell an
-                  important story about who you are and why you do it.
-                  who want to know more about your business. About Us pages are
-                  where you showcase your history, what is unique about your
-                  work, your company’s values, and who you serve. The design,
-                  written content, and visual or video elements together tell an
-                  important story about who you are and why you do it.
+                <h1 className="xl:text-md lg:text-md md:text-[16px] sm:text-sm text-sm text-white font-seminbold">
+                Coding Zone Solutions. embarked on its journey into the world of mobile app development just six months ago. Founded in April 2023, our company was born out of a collective passion for technology and a vision to make a significant impact in the mobile application space. Since our inception, we've worked tirelessly to establish ourselves as a dynamic and innovative force in the industry, specializing in Android and iOS app development. Over the past half-year, we've assembled a talented team, conducted extensive market research, and adopted the latest technologies to ensure our clients receive the highest quality solutions. Our commitment to excellence has already resulted in the successful completion of projects spanning various sectors, and we're excited to continue pushing the boundaries of innovation in the months and years ahead.
                 </h1>
               </Reveal>
             </div>
@@ -98,7 +89,7 @@ const CompanyIntro = ()=> {
             "
             >
               <Reveal className="">
-                <h1 className="xl:text-md lg:text-md md:text-md sm:text-sm text-white font-normal">
+                <h1 className="xl:text-lg lg:text-lg md:text-md sm:text-sm text-white font-bold">
                   Coding Zone Solutions.
                 </h1>
               </Reveal>

@@ -36,11 +36,13 @@ const About = () => {
           </p>
          </RevealRight>
         </div>
-        <div className="w-[100%] h-[400px] mx-auto justify-end items-start flex flex-col">
+        <div className="sm:mt-[80px] w-[100%] h-[400px]
+         justify-center items-center
+           flex flex-col">
           <Image
             alt="about-us"
             src={TeamVector}
-            className="w-[100%] h-[500px] object-contain"
+            className="object-contain"
             loading="lazy"
           />
         </div>
@@ -49,7 +51,7 @@ const About = () => {
       <CompanyIntro />
 
       <TeamMembers />
-      <LastSaying />
+      {/* <LastSaying /> */}
     </div>
   );
 };

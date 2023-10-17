@@ -1,24 +1,32 @@
+import KashishSankhyan from "../../../public/images/KashishSankhyan.jpeg";
+import AmitThakur from "../../../public/images/amitthakur.jpeg";
+import CodingZone from "../../../public/images/CodingZoneLogo.png"
+
 const employees = [
     {
-        image: 'employee1.jpg',
+        id : 0 , 
+        image: KashishSankhyan,
         name: 'Kashish Sankhyan',
         designation: 'CEO / Co-Founder'
       },
       {
-        image: 'employee2.jpg',
-        name: 'Cakshu Sethi',
+        id : 1 , 
+        image: CodingZone,
+        name: 'Caksu Sethi',
         designation: 'CFO / Co-Founder'
       },
       {
-        image: 'employee3.jpg',
+        id : 2 , 
+        image: AmitThakur,
         name: 'Amit Thakur',
         designation: 'Team Lead / Co-Founder'
       },
-      //  {
-      //   image: 'employee4.jpg',
-      //   name: 'Nitesh Thakur',
-      //   designation: 'Quality Analyst'
-      // }
+       {
+        id : 3 , 
+        image: CodingZone,
+        name: 'Nitesh Thakur',
+        designation: 'Quality Analyst / Lead Generator'
+      }
   ];
 
   export {
