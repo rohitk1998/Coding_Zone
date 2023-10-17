@@ -1,4 +1,5 @@
 import KashishSankhyan from "../../../public/images/KashishSankhyan.jpeg";
+import AmitThakur from "../../../public/images/amitthakur.jpeg";
 import CodingZone from "../../../public/images/CodingZoneLogo.png"
 
 const employees = [
@@ -11,12 +12,12 @@ const employees = [
       {
         id : 1 , 
         image: CodingZone,
-        name: 'Cakshu Sethi',
+        name: 'Caksu Sethi',
         designation: 'CFO / Co-Founder'
       },
       {
         id : 2 , 
-        image: CodingZone,
+        image: AmitThakur,
         name: 'Amit Thakur',
         designation: 'Team Lead / Co-Founder'
       },
