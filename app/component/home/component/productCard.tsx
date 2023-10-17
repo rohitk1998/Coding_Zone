@@ -5,6 +5,8 @@ import Image from "next/image";
 interface Props {
   product: any;
 }
+
+///adhagdjhgsadjhgsadhhj
 const ProductCard: React.FC<Props> = ({ product }) => {
   return (
     <div className="group relative lg:w-[100%] md:w-[100%] w-[100%] hover:rounded-2xl hover:-translate-y-1 hover:scale-110 duration-200 text-gray-700 overflow-hidden
