@@ -15,35 +15,31 @@ import SecondMenuBar from "./secondMenu";
 import { GOOGLE_MAP_URL } from "@/app/common/constants";
 import { useAppContext } from "@/app/context/context";
 
-function useOutsideClick(ref  : any , callback : any ) {
+function useOutsideClick(ref: any, callback: any) {
   useEffect(() => {
-    function handleClickOutside(event : any ) {
+    function handleClickOutside(event: any) {
       if (ref.current && !ref.current.contains(event.target)) {
         callback();
       }
     }
 
     // Attach the event listener
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
 
     // Cleanup: Remove the event listener when the component unmounts
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [ref, callback]);
 }
 
 const Navbar = () => {
-  const { isOutSideClicked,
-    setIsOutSideClicked,
-    setIsMenuOpen,
-    isMenuOpen,  } = useAppContext();
-  const [openMenu, setOpenMenu] = useState(false);
+  const { setIsMenuOpen, isMenuOpen } = useAppContext();
   const [scrollY, setScrollY] = useState(0);
   const divRef = useRef(null);
 
   const handleOpenMenu = () => {
-    setOpenMenu(!openMenu);
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const handleScroll = () => {
@@ -59,17 +55,19 @@ const Navbar = () => {
   }, []);
 
   // Use the custom hook with the dropdownRef and closeDropdown callback
-  useOutsideClick(divRef, ()=> setOpenMenu(false));
+  useOutsideClick(divRef, () => setIsMenuOpen(false));
+
+  console.log("isMenuOpen", isMenuOpen);
 
   return (
     <div
       className={`fixed w-full z-10 lg:border-none lg:shadow-sm shadow-sm ${
-        scrollY > 30 || openMenu
+        scrollY > 30 || isMenuOpen
           ? "bg-white"
           : "bg-transparent z-10 opacity-[0.8]"
       }`}
     >
-      <div className="py-1">
+      <div className="py-1" ref={divRef}>
         <Container>
           <div className="flex flex-row items-center justify-between">
             <Logo />
@@ -84,13 +82,12 @@ const Navbar = () => {
             </div>
           </div>
           {(() => scrollY < 30 && <SecondMenuBar scrollY={scrollY} />)()}
-          {openMenu && (
-            <div className="block lg:hidden flex-row items-center justify-between
+          {isMenuOpen && (
+            <div
+              className="block lg:hidden flex-row items-center justify-between
             "
-
-            ref={divRef}
             >
-              <Menu isOpen={openMenu} />
+              <Menu isOpen={isMenuOpen} />
               <CommonBadge
                 url=""
                 icon={faPaperPlane}

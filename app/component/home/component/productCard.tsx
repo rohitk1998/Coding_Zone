@@ -16,7 +16,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
      <Image
         src={product.image}
         alt={product.name}
-        className="mt-2 w-[230px] h-[230px] object-fill rounded-3xl shadow-md mb-4 border-[1px]"
+        className="mt-2 w-[230px] h-[230px] object-fill rounded-3xl shadow-lg mb-4 border-[1px]"
         loading="lazy"
       />
      </div>

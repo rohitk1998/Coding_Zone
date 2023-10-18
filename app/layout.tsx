@@ -29,7 +29,7 @@ export default function RootLayout({
         {children}
         <AppFooter />
         <ScrollUpButton />
-        <BackgroundAnimation />
+        {/* <BackgroundAnimation /> */}
         </AppContextProvider>
       </body>
     </html>

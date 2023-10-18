@@ -4,6 +4,7 @@ import React from "react";
 import { MENU_ITEMS } from "../../common/constants";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useAppContext } from "@/app/context/context";
 
 const Divider = () => {
   return (
@@ -21,6 +22,7 @@ const Divider = () => {
 };
 
 const Menu: React.FC<any> = ({ isOpen  , scrollY }) => {
+  const { setIsMenuOpen, isMenuOpen } = useAppContext();
   console.log("scrollY",scrollY);
   
   const pathname = usePathname();
@@ -93,6 +95,7 @@ const Menu: React.FC<any> = ({ isOpen  , scrollY }) => {
                     : "text-secondaryColor"
                 }`}
                 href={menu.path}
+                onClick={()=> setIsMenuOpen(!isMenuOpen)}
               >
                 {menu.menuItem}
               </Link>
