@@ -6,7 +6,7 @@ import { Container, Reveal } from "../component";
 
 const ServiceComponent = () => {
   return (
-    <div className="w-[100%]">
+    <div className="w-[100%] h-[68vh]">
         <div className="flex flex-row items-center justify-center
         lg:pt-[200px]
         md:pt-[100px]
