@@ -2,16 +2,16 @@
 
 import React from "react";
 import Image from "next/image";
-import Reveal from "../../reveal";
+import Reveal from "../../component/reveal";
 
-interface RoundedCardProps {
+interface ServiceSectionProps {
   mainHeading: string;
   paragraph: string;
   index: number;
   icon: any;
 }
 
-const RoundedCard: React.FC<RoundedCardProps> = ({
+const ServiceSection: React.FC<ServiceSectionProps> = ({
   mainHeading,
   paragraph,
   index,
@@ -24,8 +24,8 @@ const RoundedCard: React.FC<RoundedCardProps> = ({
         mx-auto 
         flex 
         flex-col 
-        items-center
-        justify-center 
+        items-start
+        justify-start 
         border-[1px] 
         rounded-[20px]
         transition
@@ -36,7 +36,7 @@ const RoundedCard: React.FC<RoundedCardProps> = ({
         hover:bg-primaryColor 
         duration-200
         p-4
-        w-[100%] lg:w-[230px] xl:w-[280px]
+        w-[220px] lg:w-[280px] xl:w-[340px]
         xl:h-[200px] lg:h-[200px] md:h-[200px] sm:h-[200px] h-[200px] 
         group
         "
@@ -56,9 +56,9 @@ const RoundedCard: React.FC<RoundedCardProps> = ({
           <Image
             src={icon}
             alt="android icon"
-            className="w-[60px] h-[60px] xl:ml-0 ml-1 mb-1"
+            className="w-[20%] xl:ml-0 ml-1 mb-1"
           />
-          <h6 className="w-[70%] text-sm font-semibold text-black group-hover:text-white md:text-sm lg:text-sm xl:text-xl ml-6">
+          <h6 className="w-[60%] text-md font-semibold text-black group-hover:text-white md:text-md lg:text-lg xl:text-2xl ml-6">
             {mainHeading}
           </h6>
         </div>
@@ -72,4 +72,4 @@ const RoundedCard: React.FC<RoundedCardProps> = ({
   );
 };
 
-export default RoundedCard;
+export default ServiceSection;

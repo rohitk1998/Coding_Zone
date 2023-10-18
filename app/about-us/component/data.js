@@ -1,6 +1,8 @@
 import KashishSankhyan from "../../../public/images/KashishSankhyan.jpeg";
 import AmitThakur from "../../../public/images/amitthakur.jpeg";
 import CodingZone from "../../../public/images/CodingZoneLogo.png"
+import Naveen from "../../../public/images/abbu.jpeg"
+import AmanSankhyan from "../../../public/images/AmanSankhyan.jpeg"
 
 const employees = [
     {
@@ -26,6 +28,18 @@ const employees = [
         image: CodingZone,
         name: 'Nitesh Thakur',
         designation: 'Quality Analyst / Lead Generator'
+      },
+      {
+        id : 4, 
+        image: Naveen,
+        name: 'Naveen',
+        designation: 'Senior Developer / React Native Developer'
+      },
+      {
+        id : 5 , 
+        image: AmanSankhyan,
+        name: 'Aman Sankhyan',
+        designation: 'Junior Developer / Android Developer'
       }
   ];
 

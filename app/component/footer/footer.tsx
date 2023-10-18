@@ -11,7 +11,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import IndianFlag from "../../../public/images/india.png";
-import LocationPin from "../../../public/images/location.png";
+import LocationPin from "../../../public/images/location.svg";
+import EnvolopeIcon from "../../../public/images/mail.svg"
+import PhoneIcon from "../../../public/images/phone.svg";
 import { FaIconComponent } from "..";
 import Link from "next/link";
 
@@ -29,7 +31,7 @@ const AppFooter = () => {
                   <Image
                     alt="sdasd"
                     src={IndianFlag}
-                    className="w-[38px] h-[30px] shadow-lg"
+                    className="w-[40px] h-[30px] shadow-lg"
                   />
                   <p
                     className={`max-w-[100%] lg:text-md md:text-md text-sm xl:text-lg font-bold text-black ml-3`}
@@ -41,7 +43,7 @@ const AppFooter = () => {
                   <Image
                     alt="location Pin"
                     src={LocationPin}
-                    className="w-[20px] h-[20px] shadow-sm mt-1"
+                    className="w-[18px] h-[23px] shadow-sm mt-0"
                   />
                   <p
                     onClick={() => window.open(GOOGLE_MAP_URL)}
@@ -51,7 +53,7 @@ const AppFooter = () => {
                   </p>
                 </div>
                 <div className="w-full flex flex-row items-start justify-start py-3">
-                  <FaIconComponent
+                  {/* <FaIconComponent
                     iconName={faEnvelope}
                     iconStyle={{
                       color: "black",
@@ -62,6 +64,11 @@ const AppFooter = () => {
                     className={`
              cursor-pointer
              `}
+                  /> */}
+                   <Image
+                    alt="envolope"
+                    src={EnvolopeIcon}
+                    className="w-[18px] h-[23px] shadow-sm mt-0"
                   />
                   <p
                     className={`max-w-[100%] lg:text-md md:text-md text-sm font-normal text-gray-400 ml-2 cursor-pointer`}
@@ -75,7 +82,7 @@ const AppFooter = () => {
                   </p>
                 </div>
                 <div className="w-full flex flex-row items-start justify-start py-3">
-                  <FaIconComponent
+                  {/* <FaIconComponent
                     iconName={faPhone}
                     iconStyle={{
                       color: "black",
@@ -85,6 +92,11 @@ const AppFooter = () => {
                     className={`
               cursor-pointer
               `}
+                  /> */}
+                   <Image
+                    alt="envolope"
+                    src={PhoneIcon}
+                    className="w-[18px] h-[23px] shadow-sm mt-0"
                   />
                   <p
                     className={`max-w-[100%] lg:text-md md:text-md text-sm font-normal text-gray-400 ml-2`}

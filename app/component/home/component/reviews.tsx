@@ -78,7 +78,7 @@ const Reviews = () => {
       grid-cols-1
       "
           >
-            <div className="w-full flex flex-row lg:items-center lg:justify-end md:items-start md:justify-center items-center justify-center px-6 py-0">
+            <div className="w-full flex flex-row lg:items-center lg:justify-start md:items-start md:justify-center items-center justify-center px-6 py-0">
               <div className="lg:w-[70%] md:w-[60%] flex flex-col items-start justify-start">
                 <Reveal className="">
                   <h2 className="xl:text-6xl lg:text-6xl font-bold tracking-tight text-white sm:text-4xl text-4xl">
