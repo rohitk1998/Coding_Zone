@@ -111,7 +111,7 @@ const Reviews = () => {
                           className={`lg:h-[180px] xl:h-[180px] md:h-[180px] w-[70%] h-[180px] flex flex-col justify-center items-start`}
                         >
                           <RevealRight className="w-[100%] bg-slate-600">
-                            <div className="w-full flex flex-row items-center justify-start">
+                            <div className="w-full flex flex-row items-center justify-start px-2">
                               {/* <Image
                                 alt="sdasd"
                                 src={slide.clientImage}
@@ -120,14 +120,14 @@ const Reviews = () => {
                                 className="w-[50px] h-[50px] shadow-lg rounded-full object-cover"
                               /> */}
                               <h6 className="mb-0 text-md font-semibold text-black md:text-lg lg:text-lg">
-                                {slide.clientName}
+                                {slide?.clientName}
                               </h6>
                             </div>
-                            <div className="w-full flex flex-row items-center justify-start mt-3">
-                              <p className="mb-0 lg:text-md md:text-md text-sm font-normal text-gray-400 ">
-                                {slide.messageTitle.slice(0,100)}
+                            <div className="w-full flex flex-row items-center justify-start mt-3 px-2">
+                              <p className="mb-0 lg:text-md md:text-md sm:text-sm text-xs font-normal text-gray-400 ">
+                                {slide?.messageTitle}
                                 <button
-                                  className="bg-secondaryColor rounded-md text-white px-2 ml-1 shadow-md text-[12px] mb-1"
+                                  className="bg-secondaryColor rounded-md text-white px-2 ml-1 shadow-md text-[10px] mb-1"
                                   onClick={() => onOpen(slide)}
                                 >
                                   more
