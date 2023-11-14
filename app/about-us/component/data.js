@@ -3,6 +3,7 @@ import AmitThakur from "../../../public/images/amitthakur.jpeg";
 import CodingZone from "../../../public/images/CodingZoneLogo.png"
 import Naveen from "../../../public/images/abbu.jpeg"
 import AmanSankhyan from "../../../public/images/AmanSankhyan.jpeg"
+import Caksu from "../../../public/images/caksu.jpeg"
 
 const employees = [
     {
@@ -13,7 +14,7 @@ const employees = [
       },
       {
         id : 1 , 
-        image: CodingZone,
+        image: Caksu,
         name: 'Caksu Sethi',
         designation: 'CFO / Co-Founder'
       },
