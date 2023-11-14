@@ -34,19 +34,19 @@ const OurProcess = () => {
 
   return (
     <Container>
-      <div className="w-[75%] mx-auto flex flex-col items-center xl:justify-center lg:justify-cetner justify-center pt-[80px]">
+      <div className="w-[75%] mx-auto flex flex-col items-center xl:justify-center lg:justify-cetner justify-center pt-[60px]">
         <Reveal className="">
           <h1 className="mb-4 text-4xl font-bold text-black md:text-4xl lg:text-6xl ml-2 text-center">
             Lets talk about your project
           </h1>
         </Reveal>
         <Reveal className="">
-          <h1 className="mb-4 text-xl font-normal text-gray-500 md:text-2xl lg:text-2xl ml-2 text-center">
+          <h1 className="mb-4 text-md font-normal text-gray-500 md:text-lg lg:text-lg ml-2 text-center">
             Asking a query is the first step towards building your prototype.
           </h1>
         </Reveal>
       </div>
-      <div className="w-[95%] mx-auto flex flex-col items-center xl:justify-center lg:justify-cetner justify-center rounded-[20px]">
+      <div className="w-[95%] mb-10 mx-auto flex flex-col items-center xl:justify-center lg:justify-cetner justify-center rounded-[20px]">
         <div className="grid lg:grid-cols-2 grid-cols-1 xl:grid-cols-2 p-4 bg-white md:grid-cols-2">
           <IntroCoverImage image={ContactImage} />
           <form
