@@ -4,6 +4,9 @@ import CodingZone from "../../../public/images/CodingZoneLogo.png"
 import Naveen from "../../../public/images/abbu.jpeg"
 import AmanSankhyan from "../../../public/images/AmanSankhyan.jpeg"
 import Caksu from "../../../public/images/caksu.jpeg"
+import Ajay from "../../../public/images/Ajay.png"
+import Rahul from "../../../public/images/Rahul.jpeg"
+import Prakhar from "../../../public/images/Prakhar.jpg"
 
 const employees = [
     {
@@ -22,26 +25,63 @@ const employees = [
         id : 2 , 
         image: AmitThakur,
         name: 'Amit Thakur',
-        designation: 'Team Lead / Co-Founder'
+        designation: 'CTO'
       },
        {
         id : 3 , 
         image: CodingZone,
         name: 'Nitesh Thakur',
-        designation: 'Quality Analyst / Lead Generator'
+        designation: 'UI/UX Developer'
       },
       {
         id : 4, 
         image: Naveen,
         name: 'Naveen',
-        designation: 'Senior Developer / React Native Developer'
+        designation: 'Senior React Native Developer'
       },
       {
         id : 5 , 
+        image: Ajay,
+        name: 'Ajay Phogat',
+        designation: 'Jr. React Native Developer'
+      },
+      {
+        id : 6 , 
+        image: CodingZone,
+        name: 'Ankit ',
+        designation: 'Sr. Flutter Developer'
+      },
+      {
+        id : 7 , 
+        image: CodingZone,
+        name: 'Pratibha Chaudhary ',
+        designation: 'Jr. Flutter Developer'
+      },
+      {
+        id : 8 , 
+        image: Rahul,
+        name: 'Rahul Sankhyan ',
+        designation: 'Flutter Trainee'
+      },
+      {
+        id : 9 , 
         image: AmanSankhyan,
         name: 'Aman Sankhyan',
-        designation: 'Junior Developer / Android Developer'
-      }
+        designation: 'Jr. Android Developer'
+      },
+      {
+        id : 10 , 
+        image: CodingZone,
+        name: 'Ritu',
+        designation: 'Senior Backend Developer'
+      },
+      {
+        id : 11 , 
+        image: Prakhar,
+        name: 'Prakhar',
+        designation: 'FullStack Web Developer'
+      },
+    
   ];
 
   export {

@@ -98,7 +98,7 @@ const Navbar = () => {
               <CommonBadge
                 icon={faLocationDot}
                 heading="Coding Zone Solutions"
-                description="Phase 8B sector 74 Mohali"
+                description="C157, Phase 7, Industrial Area, Sector 73, Sahibzada Ajit Singh Nagar, Punjab 160055"
                 clickable={true}
                 url={GOOGLE_MAP_URL}
               />

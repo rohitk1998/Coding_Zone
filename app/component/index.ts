@@ -9,7 +9,7 @@ import CommonModal from "./commonModal";
 import Navbar from "./navbar/Navbar";
 import AppFooter from "./footer/footer";
 
-
+//added to vercel
 export {
     FaIconComponent , 
     Container,

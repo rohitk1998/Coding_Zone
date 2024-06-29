@@ -108,10 +108,10 @@ const OurProcess = () => {
 
             <div className="w-[100%] flex flex-col items-start justify-start pt-5 px-4 mb-1">
               <label className="lg:text-md md:text-md text-sm font-normal text-gray-500">
-                Your Message
+                Work_essage
               </label>
               <textarea 
-              placeholder="Enter your message"
+              placeholder="Enter Work_essage"
                 className="outline-none lg:text-md md:text-md text-sm text-black h-[35px] max-h-[200px] w-full pl-2 rounded-sm shadow-sm border-b-[1px] border-gray-400"
                 {...register("message")}
                 

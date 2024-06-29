@@ -110,7 +110,7 @@ const Reviews = () => {
                         <div
                           className={`lg:h-[180px] xl:h-[180px] md:h-[180px] w-[70%] h-[180px] flex flex-col justify-center items-start`}
                         >
-                          <RevealRight className="w-[100%] bg-slate-600">
+                          <RevealRight className="w-[100%] bg-white">
                             <div className="w-full flex flex-row items-center justify-start px-2">
                               {/* <Image
                                 alt="sdasd"
