@@ -110,10 +110,11 @@ const OurProcess = () => {
               <label className="lg:text-md md:text-md text-sm font-normal text-gray-500">
                 Your Message
               </label>
-              <textarea
+              <textarea 
               placeholder="Enter your message"
-                className="outline-none lg:text-md md:text-md text-sm text-black h-[35px] w-full pl-2 rounded-sm shadow-sm border-b-[1px] border-gray-400"
+                className="outline-none lg:text-md md:text-md text-sm text-black h-[35px] max-h-[200px] w-full pl-2 rounded-sm shadow-sm border-b-[1px] border-gray-400"
                 {...register("message")}
+                
               />
              <p className="text-red-400">{errors.message?.message}</p>
             </div>

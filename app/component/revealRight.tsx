@@ -1,12 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 interface RevealRightProps {
     className : string  ;
-    children : JSX.Element | any 
+    children : JSX.Element | any  
 }
 
 const RevealRight : React.FC<RevealRightProps> = ({ className , children }) => {
@@ -29,6 +28,7 @@ const RevealRight : React.FC<RevealRightProps> = ({ className , children }) => {
         visible: { opacity: 1, x: 0 },
       }}
       initial="hidden"
+      className={className}
       animate={mainControls}
       transition={{ duration: 0.5, delay: 0.25 }}
     >

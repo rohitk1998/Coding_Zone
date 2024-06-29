@@ -49,7 +49,7 @@ const AppFooter = () => {
                     onClick={() => window.open(GOOGLE_MAP_URL)}
                     className={`cursor-pointer max-w-[100%] lg:text-md md:text-md text-sm font-normal text-gray-400 ml-2`}
                   >
-                    Phase-8B Ind. Area. Mohali, Punjab, India. Pin- 160055
+                   C157, Phase 7, Industrial Area, Sector 73, Sahibzada Ajit Singh Nagar, Punjab 160055
                   </p>
                 </div>
                 <div className="w-full flex flex-row items-start justify-start py-3">
@@ -101,7 +101,7 @@ const AppFooter = () => {
                   <p
                     className={`max-w-[100%] lg:text-md md:text-md text-sm font-normal text-gray-400 ml-2`}
                   >
-                    8360308065
+                    9878722264
                   </p>
                 </div>
               </div>

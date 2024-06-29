@@ -48,6 +48,7 @@ const IntroBadgeContainer = () => {
         "
               >
                 {WORK_OVERVIEW.map((item, idx) => {
+                  console.log(item,"iteem------->")
                   return (
                     <RoundedCard
                       key={item.id}
@@ -88,7 +89,7 @@ const IntroBadgeContainer = () => {
                       paragraph={item.description}
                     />
                   );
-                }).slice(2, 4)}
+                }).slice(2, 6)}
               </div>
             </div>
           </div>
