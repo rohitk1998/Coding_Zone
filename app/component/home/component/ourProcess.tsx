@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import Container from "../../Container";
 import IntroCoverImage from "./introCover";
@@ -7,7 +7,6 @@ import Reveal from "../../reveal";
 import { useState } from "react";
 import { CommonModal } from "../..";
 import { useForm } from "react-hook-form";
-import { REGEX_PATTERN } from "@/app/common/constants";
 import { contactFormValidation } from "@/app/common/validation";
 import { yupResolver } from '@hookform/resolvers/yup';
 
